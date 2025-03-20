@@ -1,0 +1,26 @@
+.section-services {
+  text-align: center;
+  padding-top: 92px;
+}
+
+.services-title {
+  color: #693193;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.services-heading {
+  font-size: 60px;
+  color: #151516;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.services-description {
+  font-size: 20px;
+  color: #666;
+  max-width: 890px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
