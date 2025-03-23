@@ -26,7 +26,6 @@
   line-height: 1.6;
 }
 
-/* Dodati stilovi za Feature Cards */
 .features-container {
   display: flex;
   justify-content: center;
@@ -36,7 +35,6 @@
 }
 
 .feature-card {
-  z-index: -1;
   width: 330px;
   min-height: 300px;
   padding: 30px;
@@ -47,14 +45,13 @@
   flex-direction: column;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
-/* Ikonica gore levo */
 .icon-wrapper {
   position: absolute;
   top: 20px;
@@ -72,7 +69,6 @@
   height: 55px;
 }
 
-/*naslov za kartice about us */
 .feature-title {
   margin-top: 90px;
   font-size: 28px;
@@ -81,14 +77,12 @@
   line-height: 1.2;
 }
 
-/* Tekst ispod naslova */
 .feature-text {
   font-size: 15px;
   color: white;
   margin-top: 20px;
 }
 
-/* Boje i stilovi kartica */
 .purple {
   background-color: #693193;
   border-radius: 40px 40px 0px 40px;
@@ -104,7 +98,6 @@
   border-radius: 40px 40px 40px 0px;
 }
 
-/* posebni button koji stoji ispod kartica */
 .about-btn {
   color: #f0f0f0;
   border: none;
@@ -116,16 +109,21 @@
   cursor: pointer;
   margin-left: 44.5%;
   margin-top: 50px;
+  transition: 0.5s ease;
 }
 
-/* ovde pocinje drugi deo about us sekcije */
+.about-btn:hover {
+  background-color: #911f45;
+  transform: translateY(-1px);
+}
 
 .about-us {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 60px 10%;
+  padding: 60px 7%;
+  margin-right: 10%;
 }
 
 .about-content {
@@ -171,4 +169,312 @@
 }
 .about-imgs {
   float: right;
+}
+.team-container {
+  width: 100%;
+  max-width: 1600px; /* Povećana širina za 30% (od 1200px na 1400px) */
+  margin: 0 auto; /* Centriranje kontejnera */
+  margin-left: 12rem;
+  padding: 50px 20px; /* Padding za mobilne uređaje */
+  text-align: center; /* Centriranje naslova */
+}
+
+.team-title-about {
+  font-size: 50px; /* Veličina fonta za naslov */
+  font-weight: bold; /* Podebljan naslov */
+  margin-right: 68%;
+  margin-bottom: 60px; /* Razmak ispod naslova */
+}
+
+.team-card {
+  display: flex;
+  align-items: center; /* Centriranje vertikalno */
+  justify-content: space-between; /* Raspored slike i teksta */
+  margin-bottom: 40px; /* Razmak između kartica */
+}
+
+.group-one {
+  flex-direction: row; /* Slika levo, tekst desno */
+}
+
+.group-two {
+  flex-direction: row-reverse; /* Slika desno, tekst levo */
+}
+
+.team-image {
+  margin: 0 40px; /* Povećan razmak između slike i teksta */
+}
+
+.team-info {
+  flex: 1; /* Tekst zauzima preostali prostor */
+  text-align: left; /* Tekst je poravnat levo */
+}
+
+/* Centriranje imena i naslova za prvu i treću karticu */
+.group-one .team-info {
+  text-align: right; /* Centriranje teksta u desnom delu */
+}
+.group-two .team-image{
+  margin-right: -20px;
+}
+.group-one .team-image{
+  margin-left: -1px;
+}
+
+.team-name {
+  font-size: 45px; /* Povećan font za ime */
+  margin-bottom: 10px; /* Razmak ispod imena */
+}
+
+.team-title {
+  font-size: 25px; /* Povećan font za titulu */
+  font-weight: 700; /* Podebljan tekst */
+  color: #693193; /* Boja teksta */
+  margin-bottom: 15px; /* Razmak ispod titule */
+}
+
+.team-description {
+  font-size: 16px; /* Veličina fonta za opis */
+  color: #444; /* Boja teksta */
+  line-height: 1.6; /* Visina linije */
+}
+
+.team-btn {
+  background-color: #d61c5c; /* Boja pozadine dugmeta */
+  color: white; /* Boja teksta dugmeta */
+  border: none; /* Uklanjanje okvira */
+  padding: 14px 24px; /* Padding dugmeta */
+  font-size: 18px; /* Veličina fonta dugmeta */
+  font-weight: bold; /* Podebljan tekst */
+  cursor: pointer; /* Pokazivač miša */
+  border-radius: 5px; /* Zaobljeni uglovi */
+  margin-top: 30px; /* Razmak iznad dugmeta */
+}
+
+.team-btn:hover {
+  background-color: #b81a50; /* Boja pozadine dugmeta na hover */
+}
+@media (max-width: 1440px) {
+  .section-heading {
+    font-size: 48px;
+  }
+
+  .section-description {
+    font-size: 18px;
+  }
+
+  .about-us {
+    padding: 40px 5%;
+  }
+
+  .about-content {
+    max-width: 60%;
+    margin-left: 100px;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-heading {
+    font-size: 36px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+  .about-us {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 5%;
+  }
+
+  .about-content {
+    max-width: 80%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  .about-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-imgs {
+    float: none;
+    max-width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .team-container {
+    margin-left: 0; /* Uklonjena margina za mobilne uređaje */
+    padding: 30px 20px; /* Smanjen padding za mobilne uređaje */
+  }
+
+  .team-title-about {
+    font-size: 36px; /* Smanjen font za naslov */
+    margin-right: 0; /* Uklonjena margina za mobilne uređaje */
+    text-align: center; /* Centriranje naslova */
+  }
+
+  .team-card {
+    flex-direction: column; /* Jedno ispod drugog */
+    align-items: center; /* Centriranje horizontalno */
+    text-align: center; /* Centriranje teksta */
+  }
+  .group-two .team-image{
+    margin-right: 20px;
+  }
+  .group-one .team-image{
+    margin-left: 60px;
+  }
+  .team-image {
+    width: 300px; /* Smanjena slika za mobilne uređaje */
+    height: 200px; /* Smanjena slika za mobilne uređaje */
+    border-radius: 50%;
+    margin-bottom: 20px; /* Razmak ispod slike */
+  }
+
+  .team-info {
+    text-align: center; /* Centriranje teksta */
+  }
+
+  .group-one .team-info {
+    text-align: center; /* Centriranje teksta za prvu i treću karticu */
+  }
+
+  .team-name {
+    font-size: 32px; /* Smanjen font za ime */
+  }
+
+  .team-title {
+    font-size: 20px; /* Smanjen font za titulu */
+  }
+
+  .team-description {
+    font-size: 14px; /* Smanjen font za opis */
+  }
+
+  .team-btn {
+    padding: 10px 20px; /* Smanjen padding za dugme */
+    font-size: 14px; /* Smanjen font za dugme */
+  }
+  .section-about {
+    padding-top: 60px;
+  }
+
+  .feature-title {
+    font-size: 22px;
+  }
+
+  .feature-text {
+    font-size: 13px;
+  }
+
+  .feature-card {
+    width: 300px;
+  }
+
+  .purple {
+    border-radius: 40px 40px 0 0;
+  }
+
+  .red {
+    border-radius: 0px;
+  }
+
+  .dark-purple {
+    border-radius: 0px 0px 40px 40px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-heading {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 14px;
+    max-width: 90%;
+  }
+
+  .about-us {
+    padding: 30px 5%;
+    margin-left: 50px;
+  }
+  .about-btn {
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 100px;
+  }
+  .about-content {
+    max-width: 90%;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-text {
+    font-size: 13px;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 20px;
+  }
+  .section-heading {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 12px;
+  }
+
+  .about-us {
+    padding: 20px 5%;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-title {
+    font-size: 20px;
+  }
+
+  .about-text {
+    font-size: 12px;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .about-btn {
+    margin-left: 75px;
+  }
 }

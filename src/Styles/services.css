@@ -2,25 +2,179 @@
   text-align: center;
   padding-top: 92px;
 }
-
 .services-title {
   color: #693193;
   font-size: 28px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-left: 2.5rem;
+  margin-bottom: 30px;
 }
-
+.service-btn {
+  color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #d51c5b;
+  font-size: 17px;
+  margin: 10px;
+  cursor: pointer;
+  margin-left: 44.5%;
+  margin-top: 4rem;
+  transition: 0.5s ease;
+}
+.service-btn:hover {
+  background-color: #911f45;
+  transform: translateY(-1px);
+}
 .services-heading {
   font-size: 60px;
   color: #151516;
   font-weight: 800;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
-
 .services-description {
   font-size: 20px;
   color: #666;
   max-width: 890px;
   margin: 0 auto;
   line-height: 1.7;
+}
+.services-accordion .services-accordion-div {
+  width: 80%;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+.services-accordion .services-accordion-item {
+  border: none;
+  background: #fff;
+  text-align: left;
+  margin-top: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.services-accordion .services-accordion-header {
+  font-weight: bold;
+}
+.services-accordion .services-accordion-body {
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+.services-accordion .accordion-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;  
+}
+.services-accordion .accordion-button::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #693193; 
+  border-bottom: 2px solid #693193; 
+  transform: rotate(-45deg);  
+  margin-left: 10px;  
+  transition: transform 0.3s ease-in-out; 
+}
+
+/* ZA PROMENU POZICIJE STRELICE KADA JE OTVORIM */
+.services-accordion .accordion-button:not(.collapsed)::after {
+  transform: rotate(-225deg);  
+  border-left-color: white; 
+  border-bottom-color: white;
+}
+
+/* DA STRELICA UVEK BUDE VIDLJIVA I KADA JE OTVORIM*/
+.services-accordion .accordion-button.collapsed::after {
+  transform: rotate(-45deg); 
+}
+.services-accordion .accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.services-accordion .accordion-button:not(.collapsed) {
+  background-color: #693193 !important;
+  color: white !important;
+}
+
+.services-accordion .services-accordion-header {
+  font-weight: bold;
+}
+
+.services-accordion .services-accordion-body {
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+@media (max-width: 1200px) {
+  .services-accordion .services-accordion-div {
+    margin-left: 50px;
+    width: 90%;
+  }
+
+  .services-accordion .service-btn {
+    margin-left: 98px;
+  }
+
+  .section-services {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .services-heading {
+    font-size: 2.5rem;
+  }
+
+  .services-description {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-accordion .services-accordion-div {
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  .services-accordion .service-btn {
+    margin-left: 98px;
+  }
+
+  .section-services {
+    margin-top: 5px;
+  }
+
+  .services-title {
+    font-size: 1.7rem;
+  }
+
+  .services-heading {
+    font-size: 1.8rem;
+  }
+
+  .services-description {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .services-accordion .accordion-button {
+    font-size: 0.9rem;
+  }
+
+  .services-accordion .accordion-button:not(.collapsed) {
+    background-color: #693193 !important;
+    color: white !important;
+  }
 }

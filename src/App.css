@@ -3,7 +3,9 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+
 .nav {
+  z-index: 3;
   background-color: white;
   position: sticky;
   top: 0;
@@ -14,30 +16,125 @@
   align-items: center;
   font-size: 20px;
 }
+
 .links a {
   text-decoration: none;
   margin: 30px;
+  position: relative;
   color: #666363;
   transition: all 0.3s ease;
+}
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: gray;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.links a:hover::after {
+  width: 100%;
 }
 
 .links a.active {
   color: black;
   font-weight: 600;
 }
-.btn {
+
+.custom-btn {
   color: #f0f0f0;
   border: none;
   border-radius: 5px;
   padding: 10px;
   background-color: #d51c5b;
-  font-size: 17px;
+  font-size: 16px;
   margin: 10px;
   cursor: pointer;
+  transition: 0.5s ease;
 }
+.btn-secondary{
+  padding: 11px;
+  font-size: 16px;
+  border: none;
+  background-color: #6663;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+
 .faq-btn {
   cursor: pointer;
-  padding: 15px;
+  padding: 10px;
+  font-size: 16px;
   border-radius: 5px;
   border: none;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.custom-btn:hover{
+  background-color: #911f45;
+  transform: translateY(-2px);
+}
+.btn-secondary:hover{
+  background-color: #d8d6d6;
+  transform: translateY(-1.5px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: 120px; 
+  }
+
+  .links {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 80px; 
+    right: 0;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .links.open {
+    display: flex; 
+  }
+
+  .links a,
+  .links button {
+    margin: 15px 0; 
+  }
+
+  .contact {
+    display: none; 
+  }
+
+  .links .faq-btn,
+  .links .custom-btn {
+    width: 80%; 
+    margin: 10px auto; /* Centriranje dugmadi */
+  }
+  .custom-btn{
+    margin-left: 25px;
+  }
+}
+
+@media(min-width: 769px){
+  .links .faq-btn,
+  .links .custom-btn{
+    display: none;
+  }
 }

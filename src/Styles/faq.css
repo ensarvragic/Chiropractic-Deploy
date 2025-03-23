@@ -1,0 +1,174 @@
+.faq-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #693193;
+}
+
+.faq-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.faq-accordion-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.faq-accordion-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-accordion-item {
+  border: none;
+  background: #fff;
+  text-align: left;
+  margin-top: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-accordion-header {
+  font-weight: bold;
+}
+
+.faq-accordion-body {
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.faq-accordion-item .accordion-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.faq-accordion-item .accordion-button::after {
+  content: "+";
+  font-size: 1.5rem;
+  margin-left: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.faq-accordion-item .accordion-button:not(.collapsed)::after {
+  content: "-";
+}
+
+.accordion-button::after {
+  background-image: none !important;
+}
+
+.faq-accordion-item:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+.faq-accordion-item .accordion-button:not(.collapsed) {
+  color: #693193;
+  font-weight: 500;
+}
+.faq-accordion-item .accordion-button:not(.collapsed)::after {
+  color: #693193;
+}
+
+@media (max-width: 1024px) {
+  .faq-accordion-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .faq-heading {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .faq-title {
+    font-size: 1.2rem;
+  }
+}
+
+.faq-accordion-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-accordion-item {
+  border: none;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-accordion-header {
+  font-weight: bold;
+}
+
+.faq-accordion-body {
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.faq-accordion-item .accordion-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.faq-accordion-item .accordion-button::after {
+  content: "+";
+  font-size: 1.5rem;
+  margin-left: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.faq-accordion-item .accordion-button:not(.collapsed)::after {
+  content: "-";
+}
+
+/* SA OVIM CSS-OM UKLANJAM DEFAULTNU STRELICU */
+.accordion-button::after {
+  background-image: none !important;
+}
+
+@media (max-width: 600px) {
+  .faq-title {
+    font-size: 1rem;
+  }
+
+  .faq-heading {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .faq-accordion-wrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .faq-accordion-body {
+    font-size: 0.8rem;
+  }
+
+  .faq-accordion-item .accordion-button {
+    font-size: 1rem;
+  }
+}
