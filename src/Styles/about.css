@@ -35,8 +35,8 @@
 }
 
 .feature-card {
-  width: 330px;
-  min-height: 300px;
+  width: 500px;
+  min-height: 450px;
   padding: 30px;
   border-radius: 25px;
   color: white;
@@ -54,8 +54,8 @@
 
 .icon-wrapper {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 35px;
+  left: 35px;
   width: 72px;
   height: 72px;
   display: flex;
@@ -65,22 +65,25 @@
 
 .feature-icon {
   font-size: 48px;
-  width: 55px;
-  height: 55px;
+  width: 100px;
+  height: 100px;
 }
 
 .feature-title {
   margin-top: 90px;
-  font-size: 28px;
+  font-size: 35px;
+  margin-left: 10px;
+  margin-top: 25%;
   font-weight: bold;
   color: white;
   line-height: 1.2;
 }
 
 .feature-text {
-  font-size: 15px;
+  font-size: 19px;
   color: white;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-left: 10px;
 }
 
 .purple {
@@ -172,47 +175,47 @@
 }
 .team-container {
   width: 100%;
-  max-width: 1600px; /* Povećana širina za 30% (od 1200px na 1400px) */
-  margin: 0 auto; /* Centriranje kontejnera */
+  max-width: 1600px; 
+  margin: 0 auto; 
   margin-left: 12rem;
-  padding: 50px 20px; /* Padding za mobilne uređaje */
-  text-align: center; /* Centriranje naslova */
+  padding: 50px 20px; 
+  text-align: center; 
 }
 
 .team-title-about {
-  font-size: 50px; /* Veličina fonta za naslov */
-  font-weight: bold; /* Podebljan naslov */
+  font-size: 50px; 
+  font-weight: bold; 
   margin-right: 68%;
-  margin-bottom: 60px; /* Razmak ispod naslova */
+  margin-bottom: 60px; 
 }
 
 .team-card {
   display: flex;
-  align-items: center; /* Centriranje vertikalno */
-  justify-content: space-between; /* Raspored slike i teksta */
-  margin-bottom: 40px; /* Razmak između kartica */
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 40px; 
 }
 
 .group-one {
-  flex-direction: row; /* Slika levo, tekst desno */
+  flex-direction: row; 
 }
 
 .group-two {
-  flex-direction: row-reverse; /* Slika desno, tekst levo */
+  flex-direction: row-reverse; 
 }
 
 .team-image {
-  margin: 0 40px; /* Povećan razmak između slike i teksta */
+  margin: 0 40px; 
 }
 
 .team-info {
-  flex: 1; /* Tekst zauzima preostali prostor */
-  text-align: left; /* Tekst je poravnat levo */
+  flex: 1; 
+  text-align: left; 
 }
 
-/* Centriranje imena i naslova za prvu i treću karticu */
+
 .group-one .team-info {
-  text-align: right; /* Centriranje teksta u desnom delu */
+  text-align: right; 
 }
 .group-two .team-image{
   margin-right: -20px;
@@ -222,37 +225,37 @@
 }
 
 .team-name {
-  font-size: 45px; /* Povećan font za ime */
-  margin-bottom: 10px; /* Razmak ispod imena */
+  font-size: 45px; 
+  margin-bottom: 10px; 
 }
 
 .team-title {
-  font-size: 25px; /* Povećan font za titulu */
-  font-weight: 700; /* Podebljan tekst */
-  color: #693193; /* Boja teksta */
-  margin-bottom: 15px; /* Razmak ispod titule */
+  font-size: 25px; 
+  font-weight: 700; 
+  color: #693193; 
+  margin-bottom: 15px; 
 }
 
 .team-description {
-  font-size: 16px; /* Veličina fonta za opis */
-  color: #444; /* Boja teksta */
-  line-height: 1.6; /* Visina linije */
+  font-size: 16px; 
+  color: #444;
+  line-height: 1.6; 
 }
 
 .team-btn {
-  background-color: #d61c5c; /* Boja pozadine dugmeta */
-  color: white; /* Boja teksta dugmeta */
-  border: none; /* Uklanjanje okvira */
-  padding: 14px 24px; /* Padding dugmeta */
-  font-size: 18px; /* Veličina fonta dugmeta */
-  font-weight: bold; /* Podebljan tekst */
-  cursor: pointer; /* Pokazivač miša */
-  border-radius: 5px; /* Zaobljeni uglovi */
-  margin-top: 30px; /* Razmak iznad dugmeta */
+  background-color: #d61c5c; 
+  color: white; 
+  border: none;
+  padding: 14px 24px; 
+  font-size: 18px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  margin-top: 30px; 
 }
 
 .team-btn:hover {
-  background-color: #b81a50; /* Boja pozadine dugmeta na hover */
+  background-color: #b81a50; 
 }
 @media (max-width: 1440px) {
   .section-heading {
@@ -323,20 +326,20 @@
 }
 @media (max-width: 768px) {
   .team-container {
-    margin-left: 0; /* Uklonjena margina za mobilne uređaje */
-    padding: 30px 20px; /* Smanjen padding za mobilne uređaje */
+    margin-left: 0; 
+    padding: 30px 20px; 
   }
 
   .team-title-about {
-    font-size: 36px; /* Smanjen font za naslov */
-    margin-right: 0; /* Uklonjena margina za mobilne uređaje */
-    text-align: center; /* Centriranje naslova */
+    font-size: 36px; 
+    margin-right: 0;
+    text-align: center; 
   }
 
   .team-card {
-    flex-direction: column; /* Jedno ispod drugog */
-    align-items: center; /* Centriranje horizontalno */
-    text-align: center; /* Centriranje teksta */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
   }
   .group-two .team-image{
     margin-right: 20px;
@@ -345,42 +348,55 @@
     margin-left: 60px;
   }
   .team-image {
-    width: 300px; /* Smanjena slika za mobilne uređaje */
-    height: 200px; /* Smanjena slika za mobilne uređaje */
+    width: 300px; 
+    height: 200px; 
     border-radius: 50%;
-    margin-bottom: 20px; /* Razmak ispod slike */
+    margin-bottom: 20px; 
   }
 
   .team-info {
-    text-align: center; /* Centriranje teksta */
+    text-align: center; 
   }
 
   .group-one .team-info {
-    text-align: center; /* Centriranje teksta za prvu i treću karticu */
+    text-align: center; 
   }
 
   .team-name {
-    font-size: 32px; /* Smanjen font za ime */
+    font-size: 32px; 
   }
 
   .team-title {
-    font-size: 20px; /* Smanjen font za titulu */
+    font-size: 20px; 
   }
 
   .team-description {
-    font-size: 14px; /* Smanjen font za opis */
+    font-size: 14px; 
   }
 
   .team-btn {
-    padding: 10px 20px; /* Smanjen padding za dugme */
-    font-size: 14px; /* Smanjen font za dugme */
+    padding: 10px 20px; 
+    font-size: 14px; 
   }
   .section-about {
     padding-top: 60px;
   }
-
+  .feature-icon{
+    font-size: 48px;
+    width: 55px;
+    height: 55px;
+    margin-left: -10px;
+  }
+  .feature-text{
+    font-size: 15px;
+    margin-top: 40px;
+  }
   .feature-title {
-    font-size: 22px;
+    margin-top: 100px;
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
   }
 
   .feature-text {

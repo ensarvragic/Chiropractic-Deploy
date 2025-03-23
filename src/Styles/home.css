@@ -148,29 +148,29 @@
 
 @media screen and (max-width: 480px) {
   .home h1 {
-    font-size: 28px; /* Malo manji font za bolju preglednost */
+    font-size: 28px;
     padding: 10px;
-    text-align: center; /* Centeriranje naslova */
+    text-align: center; 
   }
 
   .buttons {
-    margin-left: 0; /* Uklanjanje margine s leva */
+    margin-left: 0; 
     display: flex;
-    flex-direction: column; /* Dugmadi stavljene u kolonu */
-    gap: 10px; /* Razmak između dugmadi */
+    flex-direction: column; 
+    gap: 10px; 
     align-items: center;
   }
 
   .home p {
     font-size: 14px;
-    text-align: center; /* Tekst centriran */
-    padding: 0 15px; /* Dodavanje malih paddinga sa strane */
+    text-align: center;
+    padding: 0 15px; 
   }
 
   .stats {
     display: flex;
-    flex-direction: column; /* Statičke informacije u koloni */
-    align-items: center; /* Centriranje statsa */
+    flex-direction: column; 
+    align-items: center; 
     gap: 15px;
   }
   .btn-secondary{
@@ -178,7 +178,7 @@
   }
   .stats h2 {
     font-size: 26px;
-    text-align: center; /* Centriranje brojeva */
+    text-align: center; 
   }
 
   .stats p {
@@ -187,17 +187,17 @@
   }
 
   .home .btn {
-    width: 90%; /* Dugme zauzima većinu širine */
+    width: 90%; 
     font-size: 14px;
     padding: 12px 0;
     margin-right: 0;
     margin-top: 10px;
-    text-align: center; /* Tekst unutar dugmeta centriran */
+    text-align: center; 
   }
 
   .home-content {
     max-width: 100%;
-    padding: 0 15px; /* Dodavanje paddinga sa strane */
+    padding: 0 15px; 
   }
 
   .home-img img {

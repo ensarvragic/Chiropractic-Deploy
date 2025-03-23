@@ -24,6 +24,7 @@ import secondChiro from "./assets/secondChiro.png";
 import thirdChiro from "./assets/thirdChiro.png";
 import fourthChiro from "./assets/fourthChiro.png";
 import "./Styles/faq.css";
+import { ImQuotesLeft } from "react-icons/im";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("Home");
@@ -448,47 +449,78 @@ export function Services({ handleShowModal }) {
 }
 
 export function Reviews() {
-  return(
+  return (
     <div className="testimonials-container">
       <h2>Testimonials</h2>
       <h1>What Our Customers Have To Say About Our Work</h1>
-      <a href="/reviews" className="reviews-button">Read our 175 reviews</a>
+      <a href="/reviews" className="reviews-button">
+        Read our 175 reviews
+      </a>
 
       <div className="testimonial-cards">
         <div className="testimonial-card">
-          <div className="quote-icon">“</div>
+          <div className="quote-icon">
+            <ImQuotesLeft />
+          </div>
           <h3>Knowledgeable</h3>
           <p>
-            Complete Chiropractors Dee Why are amazing. All the team are great. I initially met with Rebecca, and started seeing Hooman.
-            I still have a way to go, but I am constantly improving. Thanks 😊
+            I cannot recommend this chiropractor enough! From the moment I
+            walked in, I was welcomed with warmth and professionalism. The
+            doctor took the time to understand my specific concerns and tailored
+            the treatment accordingly. I felt a noticeable improvement after
+            just one session, and with each visit, my mobility and overall
+            well-being continued to improve. The office is well-maintained, the
+            staff is incredibly friendly, and the entire experience is nothing
+            short of outstanding. If you're looking for a skilled,
+            knowledgeable, and genuinely caring chiropractor, this is the place
+            to go! Thanks 😊
           </p>
-          <span>- Ensar</span>
+          <strong>- Scott</strong>
         </div>
 
         <div className="testimonial-card">
-          <div className="quote-icon">“</div>
+          <div className="quote-icon">
+            <ImQuotesLeft />
+          </div>
           <h3>Professional</h3>
           <p>
-            Complete Chiropractors Dee Why are amazing. All the team are great. I initially met with Rebecca, and started seeing Hooman.
-            I still have a way to go, but I am constantly improving. Thanks 😊
+            My experience at this chiropractic clinic has been nothing but
+            positive. Not only did the treatment help relieve my chronic back
+            pain, but the chiropractor also provided valuable advice on posture,
+            daily exercises, and lifestyle changes that have made a real
+            difference in my health. The holistic approach here is what truly
+            sets them apart—it's not just about quick fixes but long-term
+            well-being. The professionalism, expertise, and friendly atmosphere
+            make every visit enjoyable. I can confidently say that my quality of
+            life has improved tremendously thanks to their care! Thanks 😊
           </p>
-          <span>- Ensar</span>
+          <strong>- Matt</strong>
         </div>
 
         <div className="testimonial-card">
-          <div className="quote-icon">“</div>
+          <div className="quote-icon">
+            <ImQuotesLeft />
+          </div>
           <h3>Amazing Work</h3>
           <p>
-            Complete Chiropractors Dee Why are amazing. All the team are great. I initially met with Rebecca, and started seeing Hooman.
-            I still have a way to go, but I am constantly improving. Thanks 😊
+            I had been struggling with neck and shoulder pain for months before
+            I found this chiropractor, and I only wish I had come sooner! Every
+            appointment is a pleasant experience, from the welcoming front desk
+            staff to the thorough and effective treatments. The chiropractor
+            takes the time to explain each step and ensures that I feel
+            comfortable throughout the process. What truly impressed me was the
+            personalized approach—no one-size-fits-all solutions, just dedicated
+            care tailored to my needs. If you're looking for someone who is not
+            only highly skilled but also compassionate and attentive, look no
+            further. This place is a game-changer! Thanks 😊
           </p>
-          <span>- Ensar</span>
+          <strong>- Rabecca</strong>
         </div>
       </div>
 
       <button className="consultation-button">Book A Consultation</button>
     </div>
-  )
+  );
 }
 
 export function Blog() {
