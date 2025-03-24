@@ -12,9 +12,9 @@ export default function NavBar({
 }) {
   return (
     <nav className="nav" aria-label="Main navigation">
-      {/* <div className="logo">
+      <div className="logo">
         <img src={logo} alt="Company Logo" loading="lazy" disable/>
-      </div> */}
+      </div>
 
       <div className={`links ${menuOpen ? "open" : ""}`}>
         {["Home", "About", "Services", "Reviews", "Blog"].map((section) => (
