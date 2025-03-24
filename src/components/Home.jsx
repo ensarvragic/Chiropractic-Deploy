@@ -46,7 +46,7 @@ export default function Home({ handleShowModal }) {
           alt="Chiropractic session in progress" 
           width="696"
           height="620"
-          fetchpriority="high" // ✅ prioritet učitavanja
+          fetchPriority="high" // ✅ prioritet učitavanja
         />
       </div>
     </section>
