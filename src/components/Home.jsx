@@ -1,31 +1,30 @@
-import CustomButton from './CustomBtn';
-import chiropractor from '../assets/chiropractor1.png';
+import CustomButton from "./CustomBtn";
+import chiropractor from "../assets/chiropractor1.png";
 import { FaPhoneAlt } from "react-icons/fa";
-import '../Styles/home.css';
-
-
+import "../Styles/home.css";
 
 export default function Home({ handleShowModal }) {
   return (
-    <div className="home">
+    <section className="home">
       <div className="home-content">
         <h1>
           Leading Chiropractors in{" "}
           <span className="highlight">Sydney’s Northern Beaches</span>
         </h1>
-        <p className="hom-text">
+        <p className="home-text">
           Feel better after your first session with pioneers of Advanced
           Biostructural Correction, trusted for over 15 years.
         </p>
         <div className="buttons">
-          <CustomButton onClick={handleShowModal}>
+          <CustomButton onClick={handleShowModal} aria-label="Schedule a call">
             SCHEDULE A CALL
             <FaPhoneAlt style={{ marginLeft: "10px" }} />
           </CustomButton>
-          <button className="btn-secondary">See How it Works</button>
+          <button className="btn-secondary" aria-label="See how it works">
+            See How it Works
+          </button>
         </div>
-        <div className="stats">
-          {/* da se odradi u lniji da bude */}
+        <section className="stats">
           <div>
             <h2>15+</h2>
             <p>Years Experience</p>
@@ -38,12 +37,12 @@ export default function Home({ handleShowModal }) {
             <h2>5/5</h2>
             <p>Reviews</p>
           </div>
-        </div>
+        </section>
       </div>
 
       <div className="home-img">
-        <img src={chiropractor} alt="Chiropractic session" />
+        <img src={chiropractor} alt="Chiropractic session in progress" />
       </div>
-    </div>
+    </section>
   );
 }

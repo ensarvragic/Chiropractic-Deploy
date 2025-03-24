@@ -9,7 +9,6 @@ import { Icon } from "@iconify/react";
 import { FaCalendarCheck, FaComment } from "react-icons/fa";
 import '../Styles/about.css';
 
-
 export default function About({ handleShowModal }) {
   const chiropractors = [
     {
@@ -41,9 +40,10 @@ export default function About({ handleShowModal }) {
       image: fourthChiro,
     },
   ];
+
   return (
     <div className="about">
-      <div className="section-about">
+      <section className="section-about">
         <h3 className="section-title">How are we Different?</h3>
         <h1 className="section-heading">
           PERSONALIZED CARE I EXPERT <br />
@@ -54,7 +54,8 @@ export default function About({ handleShowModal }) {
           for lasting relief, improved mobility, and long-term wellness tailored
           to your needs.
         </p>
-      </div>
+      </section>
+
       <div className="features-container">
         <div className="feature-card purple">
           <div className="icon-wrapper">
@@ -73,7 +74,7 @@ export default function About({ handleShowModal }) {
 
         <div className="feature-card red">
           <div className="icon-wrapper">
-            <img src={massageIcon} className="feature-icon" />
+            <img src={massageIcon} className="feature-icon" alt="Massage Icon" />
           </div>
           <div className="feature-content">
             <h2 className="feature-title">
@@ -102,10 +103,12 @@ export default function About({ handleShowModal }) {
           </div>
         </div>
       </div>
+
       <button className="about-btn" onClick={handleShowModal}>
         <FaCalendarCheck style={{ marginRight: "5px" }} />
         Book An Appointment
       </button>
+
       <section className="about-us">
         <div className="about-content">
           <h3 className="about-subtitle">About Us.</h3>
@@ -132,18 +135,17 @@ export default function About({ handleShowModal }) {
           </a>
         </div>
         <div className="about-image">
-          <img src={AboutImage} alt="Team" className="about-imgs" />
-          <img src={AboutImage1} alt="Team" className="about-imgs" />
+          <img src={AboutImage} alt="Our Team" className="about-imgs" />
+          <img src={AboutImage1} alt="Child Chiropractic Treatment" className="about-imgs" />
         </div>
       </section>
+
       <div className="team-container">
-        <h2 className="team-title-about">Who we are?</h2>
+        <h2 className="team-title-about">Who We Are?</h2>
         {chiropractors.map((chiro, index) => (
           <div
             key={index}
-            className={`team-card ${
-              index % 2 === 0 ? "group-one" : "group-two"
-            } ${index % 2 === 0 ? "left" : "right"}`}
+            className={`team-card ${index % 2 === 0 ? "group-one" : "group-two"} ${index % 2 === 0 ? "left" : "right"}`}
           >
             <img src={chiro.image} alt={chiro.name} className="team-image" />
             <div className="team-info">
@@ -154,7 +156,7 @@ export default function About({ handleShowModal }) {
           </div>
         ))}
         <button className="team-btn" onClick={handleShowModal}>
-          Book An Consultation
+          Book A Consultation
           <FaComment style={{ marginLeft: "5px", marginBottom: "3px" }} />
         </button>
       </div>

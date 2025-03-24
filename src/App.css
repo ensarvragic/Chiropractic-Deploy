@@ -82,10 +82,12 @@
 
 .custom-btn:hover{
   background-color: #911f45;
+  outline: 2px solid #f0f0f0;
   transform: translateY(-2px);
 }
 .btn-secondary:hover{
   background-color: #d8d6d6;
+  outline: 2px solid #f0f0f0;
   transform: translateY(-1.5px);
 }
 

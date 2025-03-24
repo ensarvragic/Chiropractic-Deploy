@@ -2,16 +2,24 @@ import logo from "../assets/logo.png";
 import { FaCalendarCheck, FaBars, FaTimes } from "react-icons/fa";
 import CustomButton from "./CustomBtn";
 
-import '../App.css'
+import "../App.css";
 
-export default function NavBar({ scrollToSection, activeSection, handleShowModal, menuOpen, setMenuOpen }) {
-  
+export default function NavBar({
+  scrollToSection,
+  activeSection,
+  handleShowModal,
+  menuOpen,
+  setMenuOpen,
+}) {
   return (
-    <div className="nav">
+    <nav className="nav" aria-label="Main navigation">
       <div className="logo">
-        <img src={logo} alt="Logo" />
+        <img src={logo} alt="Company Logo" />
       </div>
-      <div className={`links ${menuOpen ? "open" : ""}`}>
+      <div
+        className={`links ${menuOpen ? "open" : ""}`}
+        aria-expanded={menuOpen}
+      >
         {["Home", "About", "Services", "Reviews", "Blog"].map((section) => (
           <a
             key={section}
@@ -22,6 +30,7 @@ export default function NavBar({ scrollToSection, activeSection, handleShowModal
               setMenuOpen(false);
             }}
             className={activeSection === section ? "active" : ""}
+            aria-current={activeSection === section ? "page" : undefined}
           >
             {section}
           </a>
@@ -34,6 +43,7 @@ export default function NavBar({ scrollToSection, activeSection, handleShowModal
             setMenuOpen(false);
           }}
           className={`faq-btn ${activeSection === "FAQ" ? "active" : ""}`}
+          aria-label="Go to FAQ section"
         >
           FAQ
         </button>
@@ -51,6 +61,7 @@ export default function NavBar({ scrollToSection, activeSection, handleShowModal
             setMenuOpen(false);
           }}
           className={`faq-btn ${activeSection === "FAQ" ? "active" : ""}`}
+          aria-label="Go to FAQ section"
         >
           FAQ
         </button>
@@ -59,9 +70,13 @@ export default function NavBar({ scrollToSection, activeSection, handleShowModal
           Book An Appointment
         </CustomButton>
       </div>
-      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+      <button
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+      >
         {menuOpen ? <FaTimes /> : <FaBars />}
       </button>
-    </div>
+    </nav>
   );
 }

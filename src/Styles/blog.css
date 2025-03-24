@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 80px 10%;
-    background: linear-gradient(135deg, #693193 25%, #d61c5c 90%); 
+    background: linear-gradient(135deg, #693193 25%, #6a1834 90%); 
     margin-bottom: 80px;
     margin-top: 80px;
     color: white; 
@@ -25,6 +25,7 @@
     margin-bottom: 20px;
     color: #e0e0e0; 
   }
+
   .blog-consultation-btn {
     background-color: #d61c5c; 
     color: white;
@@ -34,11 +35,12 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: 0.5s ease;
   }
   
   .blog-consultation-btn:hover {
-    background-color: #d11c3c; 
+    background-color: rgb(189, 10, 70);
+    transform: translateY(-1px);
   }
  
   .blog-video-container {

@@ -251,10 +251,13 @@
   cursor: pointer;
   border-radius: 5px;
   margin-top: 30px;
+  transition: 0.5s ease;
 }
 
 .team-btn:hover {
-  background-color: #b81a50;
+  background-color: #911f45;
+  transform: translateY(-1px);
+
 }
 @media (max-width: 1440px) {
   .section-heading {
@@ -457,13 +460,18 @@
   }
 }
 @media (max-width: 480px) {
+  .feature-card{
+    width: 70%;
+  }
+  .feature-text{
+    font-size: 17px;
+  }
   .section-title {
     font-size: 20px;
   }
   .section-heading {
     font-size: 24px;
   }
-
   .section-description {
     font-size: 12px;
   }
