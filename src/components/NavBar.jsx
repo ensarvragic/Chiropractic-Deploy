@@ -31,6 +31,7 @@ export default function NavBar({
             }}
             className={activeSection === section ? "active" : ""}
             aria-current={activeSection === section ? "page" : undefined}
+            aria-label={`Go to the ${section} section`}
           >
             {section}
           </a>
@@ -47,7 +48,7 @@ export default function NavBar({
         >
           FAQ
         </button>
-        <CustomButton onClick={handleShowModal}>
+        <CustomButton onClick={handleShowModal} aria-label="Book an appointment">
           <FaCalendarCheck style={{ marginRight: "5px" }} />
           Book An Appointment
         </CustomButton>
@@ -65,7 +66,7 @@ export default function NavBar({
         >
           FAQ
         </button>
-        <CustomButton onClick={handleShowModal}>
+        <CustomButton onClick={handleShowModal} aria-label="Book an appointment">
           <FaCalendarCheck style={{ marginRight: "5px" }} />
           Book An Appointment
         </CustomButton>

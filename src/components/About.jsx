@@ -43,9 +43,9 @@ export default function About({ handleShowModal }) {
 
   return (
     <div className="about">
-      <section className="section-about">
+      <section className="section-about" aria-labelledby="about-heading">
         <h3 className="section-title">How are we Different?</h3>
-        <h1 className="section-heading">
+        <h1 className="section-heading" id="about-heading">
           PERSONALIZED CARE I EXPERT <br />
           CHIROPRACTIC TREATMENT
         </h1>
@@ -57,12 +57,12 @@ export default function About({ handleShowModal }) {
       </section>
 
       <div className="features-container">
-        <div className="feature-card purple">
+        <div className="feature-card purple" aria-labelledby="male-female-chiropractors">
           <div className="icon-wrapper">
             <Icon icon="mdi:face-female" className="feature-icon" />
           </div>
           <div className="feature-content">
-            <h2 className="feature-title">
+            <h2 className="feature-title" id="male-female-chiropractors">
               Male & Female <br /> Chiropractors
             </h2>
             <p className="feature-text">
@@ -72,12 +72,12 @@ export default function About({ handleShowModal }) {
           </div>
         </div>
 
-        <div className="feature-card red">
+        <div className="feature-card red" aria-labelledby="on-site-massage">
           <div className="icon-wrapper">
             <img src={massageIcon} className="feature-icon" alt="Massage Icon" />
           </div>
           <div className="feature-content">
-            <h2 className="feature-title">
+            <h2 className="feature-title" id="on-site-massage">
               On-site Massage <br /> Therapist
             </h2>
             <p className="feature-text">
@@ -87,12 +87,12 @@ export default function About({ handleShowModal }) {
           </div>
         </div>
 
-        <div className="feature-card dark-purple">
+        <div className="feature-card dark-purple" aria-labelledby="pain-relief">
           <div className="icon-wrapper">
             <Icon icon="solar:running-bold" className="feature-icon" />
           </div>
           <div className="feature-content">
-            <h2 className="feature-title">
+            <h2 className="feature-title" id="pain-relief">
               We can reduce pain <br /> in just one visit
             </h2>
             <p className="feature-text">
@@ -104,15 +104,15 @@ export default function About({ handleShowModal }) {
         </div>
       </div>
 
-      <button className="about-btn" onClick={handleShowModal}>
+      <button className="about-btn" onClick={handleShowModal} aria-label="Book an appointment">
         <FaCalendarCheck style={{ marginRight: "5px" }} />
         Book An Appointment
       </button>
 
-      <section className="about-us">
+      <section className="about-us" aria-labelledby="about-us-title">
         <div className="about-content">
           <h3 className="about-subtitle">About Us.</h3>
-          <h2 className="about-title">
+          <h2 className="about-title" id="about-us-title">
             The Northern Beaches' Most Trusted Chiropractors
           </h2>
           <p className="about-text">
@@ -130,7 +130,7 @@ export default function About({ handleShowModal }) {
             we’ll address your lifestyle habits, posture, and diet to enhance
             your wellness and bring you closer to reducing chronic pain.
           </p>
-          <a href="#learn-more" className="learn-more">
+          <a href="#learn-more" className="learn-more" aria-label="Learn more about us">
             Learn More →
           </a>
         </div>
@@ -140,22 +140,23 @@ export default function About({ handleShowModal }) {
         </div>
       </section>
 
-      <div className="team-container">
-        <h2 className="team-title-about">Who We Are?</h2>
+      <div className="team-container" aria-labelledby="team-title">
+        <h2 className="team-title-about" id="team-title">Who We Are?</h2>
         {chiropractors.map((chiro, index) => (
           <div
             key={index}
             className={`team-card ${index % 2 === 0 ? "group-one" : "group-two"} ${index % 2 === 0 ? "left" : "right"}`}
+            aria-labelledby={`team-member-${index}`}
           >
-            <img src={chiro.image} alt={chiro.name} className="team-image" />
+            <img src={chiro.image} alt={`Image of ${chiro.name}`} className="team-image" />
             <div className="team-info">
-              <h3 className="team-name">{chiro.name}</h3>
+              <h3 className="team-name" id={`team-member-${index}`}>{chiro.name}</h3>
               <p className="team-title">{chiro.title}</p>
               <p className="team-description">{chiro.description}</p>
             </div>
           </div>
         ))}
-        <button className="team-btn" onClick={handleShowModal}>
+        <button className="team-btn" onClick={handleShowModal} aria-label="Book a consultation with our team">
           Book A Consultation
           <FaComment style={{ marginLeft: "5px", marginBottom: "3px" }} />
         </button>

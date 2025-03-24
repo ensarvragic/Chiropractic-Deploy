@@ -7,32 +7,31 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-section">
           <h3 className="footer-title">Product</h3>
-          <ul className="footer-links">
-            <li>Spinal Adjustments</li>
-            <li>Massage Therapy</li>
-            <li>Corrective Exercises</li>
-            <li>Posture Assessment</li>
-            <li>Wellness Advice</li>
-            <li>Rehabilitation</li>
+          <ul className="footer-links" role='list'>
+            <li aria-label="Spinal Adjustments">Spinal Adjustments</li>
+            <li aria-label="Massage Therapy">Massage Therapy</li>
+            <li aria-label="Corrective Exercises">Corrective Exercises</li>
+            <li aria-label="Posture Assessment">Posture Assessment</li>
+            <li aria-label="Wellness Advice">Wellness Advice</li>
+            <li aria-label="Rehabilitation">Rehabilitation</li>
           </ul>
         </div>
 
- 
         <div className="footer-section">
           <h3 className="footer-title">Information</h3>
           <ul className="footer-links">
-            <li>FAQ</li>
-            <li>Blog</li>
-            <li>Support</li>
+            <li aria-label="FAQ">FAQ</li>
+            <li aria-label="Blog">Blog</li>
+            <li aria-label="Support">Support</li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h3 className="footer-title">Company</h3>
           <ul className="footer-links">
-            <li>About us</li>
-            <li>Careers</li>
-            <li>Contact us</li>
+            <li aria-label="About Us">About us</li>
+            <li aria-label="Careers">Careers</li>
+            <li aria-label="Contact Us">Contact us</li>
           </ul>
         </div>
 
@@ -48,6 +47,7 @@ export default function Footer() {
               type="email"
               placeholder="Email address"
               className="email-input"
+               aria-label="Enter your email address"
             />
             <button className="subscribe-btn">Subscribe</button>
           </div>
@@ -56,12 +56,12 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="footer-img">
-          <img src={logo} />
+          <img src={logo} alt='Complete Chiropractic logo'/>
         </div>
         <div className="footer-bottom-left">
-          <span>Terms</span>
-          <span>Privacy</span>
-          <span>Cookies</span>
+          <span aria-label="Terms of Service">Terms</span>
+          <span aria-label="Privacy Policy">Privacy</span>
+          <span aria-label="Cookie Policy">Cookies</span>
         </div>
         <div className="footer-bottom-right">
           <span>© 2025 Complete Chiropractic. All rights reserved.</span>

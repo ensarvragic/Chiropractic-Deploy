@@ -3,12 +3,10 @@
   color: #ffffff;
   border-bottom: none;
 }
-
 .custom-modal-body {
   background-color: #f8f9fa;
   padding: 20px;
 }
-
 .custom-form-group {
   margin-bottom: 20px;
 }
@@ -43,6 +41,7 @@
 .custom-btn-secondary {
   background-color: #693193;
   border-color: #693193;
+  padding: 7px;
 }
 .custom-btn-secondary:hover {
   background-color: #693193;

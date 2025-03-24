@@ -4,7 +4,7 @@
   font-family: "Poppins", sans-serif;
 }
 .nav {
-  z-index: 3;
+  z-index: 5;
   background-color: white;
   position: sticky;
   top: 0;
@@ -45,6 +45,7 @@
 }
 
 .custom-btn {
+  font-weight: bold;
   color: #f0f0f0;
   border: none;
   border-radius: 5px;
