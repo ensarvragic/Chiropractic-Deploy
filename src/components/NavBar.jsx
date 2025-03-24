@@ -1,7 +1,6 @@
 import logo from "../assets/logo.png";
 import { FaCalendarCheck, FaBars, FaTimes } from "react-icons/fa";
 import CustomButton from "./CustomBtn";
-
 import "../App.css";
 
 export default function NavBar({

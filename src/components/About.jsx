@@ -1,9 +1,9 @@
-import AboutImage from "../assets/team.png";
-import AboutImage1 from "../assets/child.png";
-import firstChiro from "../assets/firstChiro.png";
-import secondChiro from "../assets/secondChiro.png";
-import thirdChiro from "../assets/thirdChiro.png";
-import fourthChiro from "../assets/fourthChiro.png";
+import AboutImage from "../assets/team-min.png";
+import AboutImage1 from "../assets/child-min.png";
+import firstChiro from "../assets/firstChiro-min.png";
+import secondChiro from "../assets/secondChiro-min.png";
+import thirdChiro from "../assets/thirdChiro-min.png";
+import fourthChiro from "../assets/fourthChiro-min.png";
 import massageIcon from "../assets/Vector.png";
 import { Icon } from "@iconify/react";
 import { FaCalendarCheck, FaComment } from "react-icons/fa";
