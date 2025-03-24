@@ -27,10 +27,8 @@ import "./Styles/faq.css";
 import { ImQuotesLeft } from "react-icons/im";
 import Recension from "./assets/recensionn.png";
 import "./Styles/modal.css";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import "./Styles/blog.css";
+import "./Styles/footer.css";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("Home");
@@ -87,10 +85,13 @@ export default function App() {
         <Reviews handleShowModal={handleShowModal} />
       </div>
       <div id="Blog" className="section">
-        <Blog />
+        <Blog handleShowModal={handleShowModal}/>
       </div>
       <div id="FAQ" className="section">
         <FAQ />
+      </div>
+      <div className="section">
+        <Footer />
       </div>
       <AppointmentModal show={showModal} handleClose={handleCloseModal} />
     </>
@@ -180,7 +181,7 @@ export function Home({ handleShowModal }) {
           <button className="btn-secondary">See How it Works</button>
         </div>
         <div className="stats">
-           {/* da se odradi u lniji da bude */}
+          {/* da se odradi u lniji da bude */}
           <div>
             <h2>15+</h2>
             <p>Years Experience</p>
@@ -204,7 +205,6 @@ export function Home({ handleShowModal }) {
 }
 
 export function About({ handleShowModal }) {
-  
   const chiropractors = [
     {
       name: "Dr. HOOMAN ZAHEDI",
@@ -538,8 +538,34 @@ export function Reviews({ handleShowModal }) {
   );
 }
 
-export function Blog() {
-  return <div style={{ height: "100vh" }}>Blog</div>;
+export function Blog({handleShowModal}) {
+  return (
+    <div className="blog-section">
+      <div className="blog-content">
+        <h1 className="blog-title">Need Help? Meet The New You Today</h1>
+        <p className="blog-text">
+          Jason enters his 7th year as Chiropractor at our Dee Why clinic. With
+          a passion for health and performance, forged in some of the best
+          clinics in Australia and the UK, he thrives on the positive outcomes
+          his patients experience.
+        </p>
+        <p className="blog-text">
+          With certainty through rigorous testing, Jason is always looking
+          toward that next level of vitality – for you, and your family.
+        </p>
+        <button className="blog-consultation-btn" onClick={handleShowModal}>Book A Consultation</button>
+      </div>
+      <div className="blog-video-container">
+        <iframe
+          src="https://www.youtube.com/embed/XvYeHDnvfPw"
+          title="Revolutionary Technique Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="blog-video"
+        ></iframe>
+      </div>
+    </div>
+  );
 }
 
 export function FAQ() {
@@ -638,6 +664,77 @@ export function FAQ() {
     </div>
   );
 }
+
+export function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section">
+          <h3 className="footer-title">Product</h3>
+          <ul className="footer-links">
+            <li>Spinal Adjustments</li>
+            <li>Massage Therapy</li>
+            <li>Corrective Exercises</li>
+            <li>Posture Assessment</li>
+            <li>Wellness Advice</li>
+            <li>Rehabilitation</li>
+          </ul>
+        </div>
+
+ 
+        <div className="footer-section">
+          <h3 className="footer-title">Information</h3>
+          <ul className="footer-links">
+            <li>FAQ</li>
+            <li>Blog</li>
+            <li>Support</li>
+          </ul>
+        </div>
+
+        <div className="footer-section">
+          <h3 className="footer-title">Company</h3>
+          <ul className="footer-links">
+            <li>About us</li>
+            <li>Careers</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+
+        <div className="footer-section">
+          <h3 className="footer-title">Subscribe</h3>
+          <p className="footer-description">
+            Hello, we are Complete Chiropractic. Our goal is to translate the positive
+            effects from revolutionizing how companies engage with their clients
+            & their team.
+          </p>
+          <div className="subscribe-form">
+            <input
+              type="email"
+              placeholder="Email address"
+              className="email-input"
+            />
+            <button className="subscribe-btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <div className="footer-img">
+          <img src={logo} />
+        </div>
+        <div className="footer-bottom-left">
+          <span>Terms</span>
+          <span>Privacy</span>
+          <span>Cookies</span>
+        </div>
+        <div className="footer-bottom-right">
+          <span>© 2025 Complete Chiropractic. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
 export function AppointmentModal({ show, handleClose }) {
   return (
     <Modal show={show} onHide={handleClose} centered>
