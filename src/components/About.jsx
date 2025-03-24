@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import AboutImage from "../assets/team-min.png";
 import AboutImage1 from "../assets/child-min.png";
 import firstChiro from "../assets/firstChiro-min.png";
@@ -7,7 +8,7 @@ import fourthChiro from "../assets/fourthChiro-min.png";
 import massageIcon from "../assets/Vector.png";
 import { Icon } from "@iconify/react";
 import { FaCalendarCheck, FaComment } from "react-icons/fa";
-import '../Styles/about.css';
+import "../Styles/about.css";
 
 export default function About({ handleShowModal }) {
   const chiropractors = [
@@ -41,22 +42,41 @@ export default function About({ handleShowModal }) {
     },
   ];
 
+  
+  useEffect(() => {
+    const elements = document.querySelectorAll(".animate-on-scroll");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="about">
-      <section className="section-about" aria-labelledby="about-heading">
+      <section className="section-about animate-on-scroll" aria-labelledby="about-heading">
         <h3 className="section-title">How are we Different?</h3>
         <h1 className="section-heading" id="about-heading">
           PERSONALIZED CARE I EXPERT <br />
           CHIROPRACTIC TREATMENT
         </h1>
         <p className="section-description">
-          Precise chiropractic care with advanced, gentle techniques designed
-          for lasting relief, improved mobility, and long-term wellness tailored
-          to your needs.
+          Precise chiropractic care with advanced, gentle techniques...
         </p>
       </section>
 
-      <div className="features-container">
+      <div className="features-container animate-on-scroll">
         <div className="feature-card purple" aria-labelledby="male-female-chiropractors">
           <div className="icon-wrapper">
             <Icon icon="mdi:face-female" className="feature-icon" />
@@ -66,23 +86,21 @@ export default function About({ handleShowModal }) {
               Male & Female <br /> Chiropractors
             </h2>
             <p className="feature-text">
-              Offering both male and female chiropractors allows you to select a
-              healthcare professional you're most comfortable with.
+              Offering both male and female chiropractors...
             </p>
           </div>
         </div>
 
         <div className="feature-card red" aria-labelledby="on-site-massage">
           <div className="icon-wrapper">
-            <img src={massageIcon} className="feature-icon" alt="Massage Icon" loading="lazy"/>
+            <img src={massageIcon} className="feature-icon" alt="Massage Icon" loading="lazy" />
           </div>
           <div className="feature-content">
             <h2 className="feature-title" id="on-site-massage">
               On-site Massage <br /> Therapist
             </h2>
             <p className="feature-text">
-              Our skilled therapist creates a tailored experience, addressing
-              specific concerns and promoting relaxation.
+              Our skilled therapist creates a tailored experience...
             </p>
           </div>
         </div>
@@ -96,51 +114,40 @@ export default function About({ handleShowModal }) {
               We can reduce pain <br /> in just one visit
             </h2>
             <p className="feature-text">
-              At Complete Chiropractic, we target pain and injuries at their
-              source. We take a holistic approach to help you achieve better
-              health.
+              At Complete Chiropractic, we target pain and injuries at their source...
             </p>
           </div>
         </div>
       </div>
 
-      <button className="about-btn" onClick={handleShowModal} aria-label="Book an appointment">
+      <button className="about-btn animate-on-scroll" onClick={handleShowModal} aria-label="Book an appointment">
         <FaCalendarCheck style={{ marginRight: "5px" }} />
         Book An Appointment
       </button>
 
-      <section className="about-us" aria-labelledby="about-us-title">
+      <section className="about-us animate-on-scroll" aria-labelledby="about-us-title">
         <div className="about-content">
           <h3 className="about-subtitle">About Us.</h3>
           <h2 className="about-title" id="about-us-title">
             The Northern Beaches' Most Trusted Chiropractors
           </h2>
           <p className="about-text">
-            As the leading chiropractic clinic in Sydney’s Northern Beaches, our
-            chiropractors have an extensive range of experience across multiple
-            treatment modalities. Ours is one of the few Australian clinics to
-            offer Advanced Biostructural Correction (ABC). This treatment method
-            is known to gradually unwind previous injuries and traumas and can
-            help you optimize your health.
+            As the leading chiropractic clinic in Sydney’s Northern Beaches...
           </p>
           <p className="about-text">
-            At Complete Chiropractic, we target pain and injuries at their
-            source. We take a holistic approach to help you achieve better
-            health. Alongside our breakthrough range of chiropractic treatments,
-            we’ll address your lifestyle habits, posture, and diet to enhance
-            your wellness and bring you closer to reducing chronic pain.
+            At Complete Chiropractic, we target pain and injuries at their source...
           </p>
           <a href="#learn-more" className="learn-more" aria-label="Learn more about us">
             Learn More →
           </a>
         </div>
         <div className="about-image">
-          <img src={AboutImage} alt="Our Team" className="about-imgs" loading="lazy"/>
-          <img src={AboutImage1} alt="Child Chiropractic Treatment" className="about-imgs" loading="lazy"/>
+          <img src={AboutImage} alt="Our Team" className="about-imgs" loading="lazy" />
+          <img src={AboutImage1} alt="Child Chiropractic Treatment" className="about-imgs" loading="lazy" />
         </div>
       </section>
 
-      <div className="team-container" aria-labelledby="team-title">
+      <div className="team-container animate-on-scroll" aria-labelledby="team-title">
         <h2 className="team-title-about" id="team-title">Who We Are?</h2>
         {chiropractors.map((chiro, index) => (
           <div
@@ -148,7 +155,7 @@ export default function About({ handleShowModal }) {
             className={`team-card ${index % 2 === 0 ? "group-one" : "group-two"} ${index % 2 === 0 ? "left" : "right"}`}
             aria-labelledby={`team-member-${index}`}
           >
-            <img src={chiro.image} alt={`Image of ${chiro.name}`} className="team-image" loading="lazy"/>
+            <img src={chiro.image} alt={`Image of ${chiro.name}`} className="team-image" loading="lazy" />
             <div className="team-info">
               <h3 className="team-name" id={`team-member-${index}`}>{chiro.name}</h3>
               <p className="team-title">{chiro.title}</p>
@@ -156,7 +163,7 @@ export default function About({ handleShowModal }) {
             </div>
           </div>
         ))}
-        <button className="team-btn" onClick={handleShowModal} aria-label="Book a consultation with our team">
+        <button className="team-btn animate-on-scroll" onClick={handleShowModal} aria-label="Book a consultation with our team">
           Book A Consultation
           <FaComment style={{ marginLeft: "5px", marginBottom: "3px" }} />
         </button>
