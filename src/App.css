@@ -55,14 +55,16 @@
   margin: 10px;
   cursor: pointer;
   transition: 0.5s ease;
+  box-sizing: border-box;
 }
 .btn-secondary{
   padding: 11px;
   font-size: 16px;
   border: none;
-  background-color: #6663;
+  background-color: #d4d6d6;
   border-radius: 5px;
   transition: 0.5s ease;
+  box-sizing: border-box;
 }
 
 .faq-btn {
@@ -71,6 +73,7 @@
   font-size: 16px;
   border-radius: 5px;
   border: none;
+  box-sizing: border-box;
 }
 
 .hamburger {
@@ -96,7 +99,6 @@
   .hamburger {
     display: block;
     margin-left: 120px; 
-    color: black;
   }
 
   .links {
@@ -131,6 +133,9 @@
   }
   .custom-btn{
     margin-left: 25px;
+  }
+  .btn-secondary{
+    color: black;
   }
 }
 
