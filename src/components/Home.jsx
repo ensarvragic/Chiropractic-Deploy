@@ -42,11 +42,11 @@ export default function Home({ handleShowModal }) {
 
       <div className="home-img">
         <img 
-        src={chiropractor} 
-        alt="Chiropractic session in progress" 
-        width='696'
-        height='620'
-        loading="lazy"
+          src={chiropractor} 
+          alt="Chiropractic session in progress" 
+          width="696"
+          height="620"
+          fetchpriority="high" // ✅ prioritet učitavanja
         />
       </div>
     </section>
