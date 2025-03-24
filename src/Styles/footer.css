@@ -97,14 +97,14 @@
   }
   
   .footer-bottom-left span:hover {
-    color: #691193; /* Plava boja na hover */
+    color: #691193; 
   }
   
   .footer-bottom-right {
     text-align: right;
   }
   
-  /* Responsivni dizajn za manje ekrane */
+
   @media (max-width: 768px) {
     .footer-content {
       flex-direction: column;

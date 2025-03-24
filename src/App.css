@@ -3,7 +3,6 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
-
 .nav {
   z-index: 3;
   background-color: white;
@@ -90,7 +89,6 @@
   transform: translateY(-1.5px);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -125,7 +123,7 @@
   .links .faq-btn,
   .links .custom-btn {
     width: 80%; 
-    margin: 10px auto; /* Centriranje dugmadi */
+    margin: 10px auto; 
   }
   .custom-btn{
     margin-left: 25px;
