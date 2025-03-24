@@ -10,6 +10,8 @@
   margin-bottom: 30px;
 }
 .service-btn {
+  display: flex;
+  align-items: center;
   color: #f0f0f0;
   border: none;
   border-radius: 5px;
@@ -69,30 +71,30 @@
   font-size: 1.1rem;
   justify-content: space-between;
   align-items: center;
-  position: relative;  
+  position: relative;
 }
 .services-accordion .accordion-button::after {
-  content: '';
+  content: "";
   display: block;
   width: 12px;
   height: 12px;
-  border-left: 2px solid #693193; 
-  border-bottom: 2px solid #693193; 
-  transform: rotate(-45deg);  
-  margin-left: 10px;  
-  transition: transform 0.3s ease-in-out; 
+  border-left: 2px solid #693193;
+  border-bottom: 2px solid #693193;
+  transform: rotate(-45deg);
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* ZA PROMENU POZICIJE STRELICE KADA JE OTVORIM */
 .services-accordion .accordion-button:not(.collapsed)::after {
-  transform: rotate(-225deg);  
-  border-left-color: white; 
+  transform: rotate(-225deg);
+  border-left-color: white;
   border-bottom-color: white;
 }
 
 /* DA STRELICA UVEK BUDE VIDLJIVA I KADA JE OTVORIM*/
 .services-accordion .accordion-button.collapsed::after {
-  transform: rotate(-45deg); 
+  transform: rotate(-45deg);
 }
 .services-accordion .accordion-button:focus {
   box-shadow: none !important;

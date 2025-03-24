@@ -175,87 +175,86 @@
 }
 .team-container {
   width: 100%;
-  max-width: 1600px; 
-  margin: 0 auto; 
+  max-width: 1600px;
+  margin: 0 auto;
   margin-left: 12rem;
-  padding: 50px 20px; 
-  text-align: center; 
+  padding: 50px 20px;
+  text-align: center;
 }
 
 .team-title-about {
-  font-size: 50px; 
-  font-weight: bold; 
+  font-size: 50px;
+  font-weight: bold;
   margin-right: 68%;
-  margin-bottom: 60px; 
+  margin-bottom: 60px;
 }
 
 .team-card {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
-  margin-bottom: 40px; 
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .group-one {
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 .group-two {
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
 }
 
 .team-image {
-  margin: 0 40px; 
+  margin: 0 40px;
 }
 
 .team-info {
-  flex: 1; 
-  text-align: left; 
+  flex: 1;
+  text-align: left;
 }
-
 
 .group-one .team-info {
-  text-align: right; 
+  text-align: right;
 }
-.group-two .team-image{
+.group-two .team-image {
   margin-right: -20px;
 }
-.group-one .team-image{
+.group-one .team-image {
   margin-left: -1px;
 }
 
 .team-name {
-  font-size: 45px; 
-  margin-bottom: 10px; 
+  font-size: 45px;
+  margin-bottom: 10px;
 }
 
 .team-title {
-  font-size: 25px; 
-  font-weight: 700; 
-  color: #693193; 
-  margin-bottom: 15px; 
+  font-size: 25px;
+  font-weight: 700;
+  color: #693193;
+  margin-bottom: 15px;
 }
 
 .team-description {
-  font-size: 16px; 
+  font-size: 16px;
   color: #444;
-  line-height: 1.6; 
+  line-height: 1.6;
 }
 
 .team-btn {
-  background-color: #d61c5c; 
-  color: white; 
+  background-color: #d61c5c;
+  color: white;
   border: none;
-  padding: 14px 24px; 
-  font-size: 18px; 
-  font-weight: bold; 
-  cursor: pointer; 
-  border-radius: 5px; 
-  margin-top: 30px; 
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 30px;
 }
 
 .team-btn:hover {
-  background-color: #b81a50; 
+  background-color: #b81a50;
 }
 @media (max-width: 1440px) {
   .section-heading {
@@ -326,68 +325,68 @@
 }
 @media (max-width: 768px) {
   .team-container {
-    margin-left: 0; 
-    padding: 30px 20px; 
+    margin-left: 0;
+    padding: 30px 20px;
   }
 
   .team-title-about {
-    font-size: 36px; 
+    font-size: 36px;
     margin-right: 0;
-    text-align: center; 
+    text-align: center;
   }
 
   .team-card {
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .group-two .team-image{
+  .group-two .team-image {
     margin-right: 20px;
   }
-  .group-one .team-image{
+  .group-one .team-image {
     margin-left: 60px;
   }
   .team-image {
-    width: 300px; 
-    height: 200px; 
+    width: 300px;
+    height: 200px;
     border-radius: 50%;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
 
   .team-info {
-    text-align: center; 
+    text-align: center;
   }
 
   .group-one .team-info {
-    text-align: center; 
+    text-align: center;
   }
 
   .team-name {
-    font-size: 32px; 
+    font-size: 32px;
   }
 
   .team-title {
-    font-size: 20px; 
+    font-size: 20px;
   }
 
   .team-description {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   .team-btn {
-    padding: 10px 20px; 
-    font-size: 14px; 
+    padding: 10px 20px;
+    font-size: 14px;
   }
   .section-about {
     padding-top: 60px;
   }
-  .feature-icon{
+  .feature-icon {
     font-size: 48px;
     width: 55px;
     height: 55px;
     margin-left: -10px;
   }
-  .feature-text{
+  .feature-text {
     font-size: 15px;
     margin-top: 40px;
   }

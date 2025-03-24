@@ -25,6 +25,12 @@ import thirdChiro from "./assets/thirdChiro.png";
 import fourthChiro from "./assets/fourthChiro.png";
 import "./Styles/faq.css";
 import { ImQuotesLeft } from "react-icons/im";
+import Recension from "./assets/recensionn.png";
+import "./Styles/modal.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("Home");
@@ -174,6 +180,7 @@ export function Home({ handleShowModal }) {
           <button className="btn-secondary">See How it Works</button>
         </div>
         <div className="stats">
+           {/* da se odradi u lniji da bude */}
           <div>
             <h2>15+</h2>
             <p>Years Experience</p>
@@ -197,6 +204,7 @@ export function Home({ handleShowModal }) {
 }
 
 export function About({ handleShowModal }) {
+  
   const chiropractors = [
     {
       name: "Dr. HOOMAN ZAHEDI",
@@ -448,13 +456,17 @@ export function Services({ handleShowModal }) {
   );
 }
 
-export function Reviews() {
+export function Reviews({ handleShowModal }) {
   return (
     <div className="testimonials-container">
       <h2>Testimonials</h2>
       <h1>What Our Customers Have To Say About Our Work</h1>
-      <a href="/reviews" className="reviews-button">
-        Read our 175 reviews
+      <a
+        href="https://www.thepeoplesreview.ie/"
+        className="reviews-link"
+        target="blank"
+      >
+        <img src={Recension} />
       </a>
 
       <div className="testimonial-cards">
@@ -462,7 +474,7 @@ export function Reviews() {
           <div className="quote-icon">
             <ImQuotesLeft />
           </div>
-          <h3>Knowledgeable</h3>
+          <h3 className="testimonial-heading">Knowledgeable</h3>
           <p>
             I cannot recommend this chiropractor enough! From the moment I
             walked in, I was welcomed with warmth and professionalism. The
@@ -518,7 +530,10 @@ export function Reviews() {
         </div>
       </div>
 
-      <button className="consultation-button">Book A Consultation</button>
+      <button className="consultation-button" onClick={handleShowModal}>
+        Book A Consultation
+        <FaComment style={{ marginLeft: "5px", marginBottom: "5px" }} />
+      </button>
     </div>
   );
 }
@@ -626,50 +641,62 @@ export function FAQ() {
 export function AppointmentModal({ show, handleClose }) {
   return (
     <Modal show={show} onHide={handleClose} centered>
-      <Modal.Header closeButton>
+      <Modal.Header closeButton className="custom-modal-header">
         <Modal.Title>Book An Appointment</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="custom-modal-body">
         <form>
-          <div className="form-group">
-            <label htmlFor="name">Full Name</label>
+          <div className="custom-form-group">
+            <label htmlFor="name" className="custom-label">
+              Full Name
+            </label>
             <input
               type="text"
-              className="form-control"
+              className="custom-input"
               id="name"
               placeholder="Enter your full name"
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="email">Email address</label>
+          <div className="custom-form-group">
+            <label htmlFor="email" className="custom-label">
+              Email address
+            </label>
             <input
               type="email"
-              className="form-control"
+              className="custom-input"
               id="email"
               placeholder="Enter your email"
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="phone">Phone Number</label>
+          <div className="custom-form-group">
+            <label htmlFor="phone" className="custom-label">
+              Phone Number
+            </label>
             <input
               type="tel"
-              className="form-control"
+              className="custom-input"
               id="phone"
               placeholder="Enter your phone number"
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="date">Preferred Date</label>
-            <input type="date" className="form-control" id="date" />
+          <div className="custom-form-group">
+            <label htmlFor="date" className="custom-label">
+              Preferred Date
+            </label>
+            <input type="date" className="custom-input" id="date" />
           </div>
-          <div className="form-group">
-            <label htmlFor="time">Preferred Time</label>
-            <input type="time" className="form-control" id="time" />
+          <div className="custom-form-group">
+            <label htmlFor="time" className="custom-label">
+              Preferred Time
+            </label>
+            <input type="time" className="custom-input" id="time" />
           </div>
-          <div className="form-group">
-            <label htmlFor="message">Additional Message</label>
+          <div className="custom-form-group custom-message-group">
+            <label htmlFor="message" className="custom-label">
+              Additional Message
+            </label>
             <textarea
-              className="form-control"
+              className="custom-input"
               id="message"
               rows="3"
               placeholder="Any additional information"
@@ -678,10 +705,18 @@ export function AppointmentModal({ show, handleClose }) {
         </form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
+        <Button
+          variant="secondary"
+          onClick={handleClose}
+          className="custom-btn-secondary"
+        >
           Close
         </Button>
-        <Button variant="primary" onClick={handleClose}>
+        <Button
+          variant="primary"
+          onClick={handleClose}
+          className="custom-btn-primary"
+        >
           Submit
         </Button>
       </Modal.Footer>
