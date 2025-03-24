@@ -13,12 +13,10 @@ export default function NavBar({
   return (
     <nav className="nav" aria-label="Main navigation">
       <div className="logo">
-        <img src={logo} alt="Company Logo" loading="lazy"/>
+        <img src={logo} alt="Company Logo" loading="lazy" />
       </div>
-      <div
-        className={`links ${menuOpen ? "open" : ""}`}
-        aria-expanded={menuOpen ? 'true' : 'false'}
-      >
+
+      <div className={`links ${menuOpen ? "open" : ""}`}>
         {["Home", "About", "Services", "Reviews", "Blog"].map((section) => (
           <a
             key={section}
@@ -35,6 +33,7 @@ export default function NavBar({
             {section}
           </a>
         ))}
+
         <button
           type="button"
           onClick={(e) => {
@@ -47,11 +46,13 @@ export default function NavBar({
         >
           FAQ
         </button>
+
         <CustomButton onClick={handleShowModal} aria-label="Book an appointment">
           <FaCalendarCheck style={{ marginRight: "5px" }} />
           Book An Appointment
         </CustomButton>
       </div>
+
       <div className="contact">
         <button
           type="button"
@@ -70,10 +71,13 @@ export default function NavBar({
           Book An Appointment
         </CustomButton>
       </div>
+
       <button
         className="hamburger"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen ? "true" : "false"}
+        aria-controls="main-navigation-links"
       >
         {menuOpen ? <FaTimes /> : <FaBars />}
       </button>
