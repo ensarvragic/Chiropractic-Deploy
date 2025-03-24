@@ -5,8 +5,8 @@ export default function FAQ() {
     return (
       <div className="faq-container">
         <div>
-          <h3 className="faq-title">Our most asked questions.</h3>
-          <h1 className="faq-heading">Frequently Asked Questions (FAQ)</h1>
+          <h3 className="faq-title" arial-level='2'>Our most asked questions.</h3>
+          <h1 className="faq-heading" arial-level='1'>Frequently Asked Questions (FAQ)</h1>
         </div>
   
         <div className="faq-accordion-wrapper">

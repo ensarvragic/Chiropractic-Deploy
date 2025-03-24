@@ -96,7 +96,7 @@
 }
 
 .consultation-button:hover {
-  background-color: #911f45;
+  background-color: hsl(0, 70%, 54%);
   transform: translateY(-1px);
 }
 

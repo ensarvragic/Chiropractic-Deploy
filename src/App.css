@@ -46,7 +46,7 @@
 
 .custom-btn {
   font-weight: bold;
-  color: #f0f0f0;
+  color: white;
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -82,7 +82,7 @@
 }
 
 .custom-btn:hover{
-  background-color: #911f45;
+  background-color: hsl(0, 70%, 54%);
   outline: 2px solid #f0f0f0;
   transform: translateY(-2px);
 }
