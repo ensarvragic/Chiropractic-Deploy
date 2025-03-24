@@ -12,22 +12,27 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Omogućava puni git history
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Stavi verziju koja ti odgovara
+          cache: npm
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm ci  # Brže i sigurnije od `npm install`
 
-      - name: Build project
+      - name: Build project with Vite
         run: npm run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
         with:
           name: production-files
-          path: ./dist
+          path: dist  # Vite koristi `dist` folder za output
 
   deploy:
     name: Deploy
@@ -36,14 +41,22 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: production-files
-          path: ./dist
+          path: dist
+
+      - name: Verify downloaded files
+        run: ls -la dist  # Proveri da li je build ispravno preuzet
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: dist  # Vite generiše build ovde
