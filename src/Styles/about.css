@@ -219,9 +219,11 @@
 }
 .group-two .team-image {
   margin-right: -20px;
+  aspect-ratio: 16/9;
 }
 .group-one .team-image {
   margin-left: -1px;
+  aspect-ratio: 16/9;
 }
 
 .team-name {
