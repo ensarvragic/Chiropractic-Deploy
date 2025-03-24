@@ -17,7 +17,7 @@ export default function NavBar({
       </div>
       <div
         className={`links ${menuOpen ? "open" : ""}`}
-        aria-expanded={menuOpen ? 'true' : 'close'}
+        aria-expanded={menuOpen ? 'true' : 'false'}
       >
         {["Home", "About", "Services", "Reviews", "Blog"].map((section) => (
           <a
