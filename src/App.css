@@ -96,6 +96,7 @@
   .hamburger {
     display: block;
     margin-left: 120px; 
+    color: black;
   }
 
   .links {
