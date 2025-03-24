@@ -74,7 +74,7 @@ export default function About({ handleShowModal }) {
 
         <div className="feature-card red" aria-labelledby="on-site-massage">
           <div className="icon-wrapper">
-            <img src={massageIcon} className="feature-icon" alt="Massage Icon" />
+            <img src={massageIcon} className="feature-icon" alt="Massage Icon" loading="lazy"/>
           </div>
           <div className="feature-content">
             <h2 className="feature-title" id="on-site-massage">
@@ -135,8 +135,8 @@ export default function About({ handleShowModal }) {
           </a>
         </div>
         <div className="about-image">
-          <img src={AboutImage} alt="Our Team" className="about-imgs" />
-          <img src={AboutImage1} alt="Child Chiropractic Treatment" className="about-imgs" />
+          <img src={AboutImage} alt="Our Team" className="about-imgs" loading="lazy"/>
+          <img src={AboutImage1} alt="Child Chiropractic Treatment" className="about-imgs" loading="lazy"/>
         </div>
       </section>
 
@@ -148,7 +148,7 @@ export default function About({ handleShowModal }) {
             className={`team-card ${index % 2 === 0 ? "group-one" : "group-two"} ${index % 2 === 0 ? "left" : "right"}`}
             aria-labelledby={`team-member-${index}`}
           >
-            <img src={chiro.image} alt={`Image of ${chiro.name}`} className="team-image" />
+            <img src={chiro.image} alt={`Image of ${chiro.name}`} className="team-image" loading="lazy"/>
             <div className="team-info">
               <h3 className="team-name" id={`team-member-${index}`}>{chiro.name}</h3>
               <p className="team-title">{chiro.title}</p>

@@ -13,7 +13,7 @@ export default function NavBar({
   return (
     <nav className="nav" aria-label="Main navigation">
       <div className="logo">
-        <img src={logo} alt="Company Logo" />
+        <img src={logo} alt="Company Logo" loading="lazy"/>
       </div>
       <div
         className={`links ${menuOpen ? "open" : ""}`}

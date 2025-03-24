@@ -20,6 +20,7 @@ export default function Reviews({ handleShowModal }) {
           src={Recension} 
           alt="Customer testimonials collage"
           className="testimonial-image"
+          loading="lazy"
         />
       </a>
 
