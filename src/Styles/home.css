@@ -78,6 +78,9 @@
   margin-left: 40px;
   aspect-ratio: 16/9;
 }
+.lcp-heading {
+  font-display: swap; /* Ensure text remains visible during font load */
+}
 
 @media screen and (max-width: 1024px) {
   .home {
