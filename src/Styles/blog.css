@@ -56,7 +56,9 @@
     height: 315px;
     border: none;
   }
-  
+  .blog-img{
+    width: 100%;
+  }
   @media (max-width: 768px) {
     .blog-section {
       flex-direction: column;
