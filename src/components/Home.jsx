@@ -1,5 +1,5 @@
 import CustomButton from "./CustomBtn";
-import chiropractor from "../assets/chiropractor1.png";
+import chiropractor from "../../public/assets/chiropractor1.png";
 import { FaPhoneAlt } from "react-icons/fa";
 import "../Styles/home.css";
 
