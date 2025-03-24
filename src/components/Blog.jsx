@@ -22,7 +22,7 @@ export default function Blog({ handleShowModal }) {
       </div>
       <div className="blog-video-container">
         <a href="https://www.youtube.com/watch?v=XvYeHDnvfPw&t=40s">
-          <img src={BlogImage} alt="youtube-video" className="blog-img" />
+          <img src={BlogImage} alt="youtube-video" className="blog-img"/>
         </a>
       </div>
     </div>
