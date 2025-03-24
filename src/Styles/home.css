@@ -54,20 +54,31 @@
   background-color: #b21447;
 }
 
+/* Stats Section - Updated */
 .stats {
   display: flex;
   gap: 50px;
   margin-top: 40px;
 }
 
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .stats h2 {
   font-size: 50px;
   color: #693193;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .stats p {
   font-size: 17px;
   color: #666;
+  margin-top: 0;
 }
 
 .home-img img {
@@ -78,10 +89,8 @@
   margin-left: 40px;
   aspect-ratio: 16/9;
 }
-.lcp-heading {
-  font-display: swap; /* Ensure text remains visible during font load */
-}
 
+/* Responsive Styles */
 @media screen and (max-width: 1024px) {
   .home {
     flex-direction: column;
@@ -103,8 +112,7 @@
   }
 
   .stats {
-    flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     margin-top: 30px;
   }
 
@@ -119,6 +127,7 @@
   .home-img img {
     height: auto;
     max-width: 100%;
+    margin-left: 0;
   }
 
   .home .btn {
@@ -129,7 +138,7 @@
 
 @media screen and (max-width: 768px) {
   .home h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   
   .btn-secondary {
@@ -145,25 +154,35 @@
     padding: 10px 18px;
   }
 
+  .stats {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
   .stats h2 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .stats p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .home-img img {
     height: auto;
-    max-width: 100%;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .home {
+    padding: 20px;
+  }
+
   .home h1 {
     font-size: 28px;
     padding: 10px;
     text-align: center;
+    margin-top: 20px;
   }
 
   .buttons {
@@ -180,24 +199,37 @@
     padding: 0 15px;
   }
 
+
   .stats {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 10px;
+    margin-top: 25px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
+  .stat-item {
+    margin-top: 15px;
+    min-width: 80px;
+    flex: 1;
+  }
+
+  .stats h2 {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+
+  .stats p {
+    font-size: 12px;
+    white-space: nowrap;
   }
 
   .btn-secondary {
     margin-right: 20px;
-  }
-
-  .stats h2 {
-    font-size: 26px;
-    text-align: center;
-  }
-
-  .stats p {
-    font-size: 14px;
-    text-align: center;
   }
 
   .home .btn {
@@ -211,12 +243,13 @@
 
   .home-content {
     max-width: 100%;
-    padding: 0 15px;
+    padding: 0 5px;
   }
 
   .home-img img {
     max-width: 100%;
     height: auto;
     margin-left: 0;
+    margin-top: 20px;
   }
 }
