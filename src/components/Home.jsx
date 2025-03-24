@@ -45,7 +45,7 @@ export default function Home({ handleShowModal }) {
         src={chiropractor} 
         alt="Chiropractic session in progress" 
         width='400'
-        height='600'
+        height='357'
         loading="lazy"
         />
       </div>
