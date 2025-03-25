@@ -1,11 +1,31 @@
 import "../Styles/services.css";
+import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { FaCalendarCheck } from "react-icons/fa";
 
 export default function Services({ handleShowModal }) {
+   useEffect(() => {
+      const elements = document.querySelectorAll(".animate-on-scroll");
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+  
+      elements.forEach((el) => observer.observe(el));
+  
+      return () => observer.disconnect();
+    }, []);
   return (
     <div>
-      <div className="section-services">
+      <div className="section-services animate-on-scroll">
         <h3 className="services-title" id="services-title">How we can help you?</h3>
         <h1 className="services-heading">Our Chiropractic Services</h1>
         <p className="services-description">
@@ -14,7 +34,7 @@ export default function Services({ handleShowModal }) {
           your overall wellness, all customized to your specific needs.
         </p>
       </div>
-      <div className="services-accordion">
+      <div className="services-accordion animate-on-scroll" >
         <div className="services-accordion-div">
           <Accordion aria-labelledby="services-title">
             <Accordion.Item eventKey="0" className="services-accordion-item">
@@ -94,7 +114,7 @@ export default function Services({ handleShowModal }) {
           </Accordion>
         </div>
         <button 
-          className="service-btn" 
+          className="service-btn animate-on-scroll" 
           onClick={handleShowModal} 
           aria-label="Book a chiropractic appointment">
           <FaCalendarCheck style={{ marginRight: "5px" }} />
