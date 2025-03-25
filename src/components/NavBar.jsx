@@ -1,30 +1,35 @@
-import logo from "../assets/logo.png";
+import { memo } from "react";
+import logo from "../assets/logo.png"; 
 import { FaCalendarCheck, FaBars, FaTimes } from "react-icons/fa";
 import CustomButton from "./CustomBtn";
 import "../App.css";
 
-export default function NavBar({
+const NavBar = ({
   scrollToSection,
   activeSection,
   handleShowModal,
   menuOpen,
   setMenuOpen,
-}) {
+}) => {
+  const sections = ["Home", "About", "Services", "Reviews", "Blog"];
+
   return (
     <nav className="nav" aria-label="Main navigation">
+      {/* Critical LCP element - optimized with eager loading and dimensions */}
       <div className="logo">
         <img
           src={logo}
           alt="Company Logo"
-          loading="eager" // Change from lazy to eager
-          width="150" // Add explicit dimensions
+          loading="eager"
+          width="150"
           height="50"
-          style={{ width: "auto", height: "auto" }} // Prevent layout shifts
+          style={{ width: "auto", height: "auto" }}
+          fetchPriority="high"
         />
       </div>
 
       <div className={`links ${menuOpen ? "open" : ""}`}>
-        {["Home", "About", "Services", "Reviews", "Blog"].map((section) => (
+        {sections.map((section) => (
           <a
             key={section}
             href={`#${section}`}
@@ -34,52 +39,12 @@ export default function NavBar({
               setMenuOpen(false);
             }}
             className={activeSection === section ? "active" : ""}
-            aria-current={activeSection === section ? "page" : undefined}
-            aria-label={`Go to the ${section} section`}
           >
             {section}
           </a>
         ))}
 
-        <button
-          type="button"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection("FAQ");
-            setMenuOpen(false);
-          }}
-          className={`faq-btn ${activeSection === "FAQ" ? "active" : ""}`}
-          aria-label="Go to FAQ section"
-        >
-          FAQ
-        </button>
-
-        <CustomButton
-          onClick={handleShowModal}
-          aria-label="Book an appointment"
-        >
-          <FaCalendarCheck style={{ marginRight: "5px" }} />
-          Book An Appointment
-        </CustomButton>
-      </div>
-
-      <div className="contact">
-        <button
-          type="button"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection("FAQ");
-            setMenuOpen(false);
-          }}
-          className={`faq-btn ${activeSection === "FAQ" ? "active" : ""}`}
-          aria-label="Go to FAQ section"
-        >
-          FAQ
-        </button>
-        <CustomButton
-          onClick={handleShowModal}
-          aria-label="Book an appointment"
-        >
+        <CustomButton onClick={handleShowModal}>
           <FaCalendarCheck style={{ marginRight: "5px" }} />
           Book An Appointment
         </CustomButton>
@@ -89,11 +54,11 @@ export default function NavBar({
         className="hamburger"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label={menuOpen ? "Close menu" : "Open menu"}
-        aria-expanded={menuOpen ? "true" : "false"}
-        aria-controls="main-navigation-links"
       >
         {menuOpen ? <FaTimes /> : <FaBars />}
       </button>
     </nav>
   );
-}
+};
+
+export default memo(NavBar);

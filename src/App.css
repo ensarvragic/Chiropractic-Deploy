@@ -75,10 +75,6 @@
   border: none;
   box-sizing: border-box;
 }
-.logo{
-  width: 10%;
-  height: 100%;
-}
 .hamburger {
   display: none;
   background: none;

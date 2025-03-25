@@ -1,54 +1,57 @@
+import { memo } from "react";
+import chiropractor from '../../public/assets/chiropractor1.webp'
 import CustomButton from "./CustomBtn";
 import { FaPhoneAlt } from "react-icons/fa";
-import chiropractor from "../../public/assets/chiropractor1.webp";
 import "../Styles/home.css";
 
-export default function Home({ handleShowModal }) {
+const Home = ({ handleShowModal }) => {
   return (
     <section className="home">
       <div className="home-content">
-        <h1 className="fade-slide-up">
+        <h1>
           Leading Chiropractors in{" "}
-          <span className="highlight">Sydney’s Northern Beaches</span>
+          <span className="highlight">Sydney's Northern Beaches</span>
         </h1>
-        <p className="home-text fade-slide-up delay-1">
+        <p>
           Feel better after your first session with pioneers of Advanced
-          Biostructural Correction, trusted for over 15 years.
+          Biostructural Correction.
         </p>
-        <div className="buttons fade-slide-up delay-2">
-          <CustomButton onClick={handleShowModal} aria-label="Schedule a call">
+        
+        <div className="buttons">
+          <CustomButton onClick={handleShowModal}>
             SCHEDULE A CALL
             <FaPhoneAlt style={{ marginLeft: "10px" }} />
           </CustomButton>
-          <button className="btn-secondary" aria-label="See how it works">
-            See How it Works
-          </button>
+          <button className="btn-secondary">See How it Works</button>
         </div>
-        <section className="stats fade-slide-up delay-3">
-          <div className="stat-item">
-            <h2>15+</h2>
-            <p>Years Experience</p>
-          </div>
-          <div className="stat-item">
-            <h2>1000'S</h2>
-            <p>Happy Customers</p>
-          </div>
-          <div className="stat-item">
-            <h2>5/5</h2>
-            <p>Reviews</p>
-          </div>
+        
+        <section className="stats">
+          {[
+            ["15+", "Years Experience"],
+            ["1000'S", "Happy Customers"],
+            ["5/5", "Reviews"]
+          ].map(([value, label], index) => (
+            <div key={index} className="stat-item">
+              <h2>{value}</h2>
+              <p>{label}</p>
+            </div>
+          ))}
         </section>
       </div>
 
-      <div className="home-img fade-slide-up delay-4">
+      {/* Critical LCP image - optimized */}
+      <div className="home-img">
         <img
           src={chiropractor}
-          alt="Chiropractic session in progress"
+          alt="Chiropractic session"
           width="696"
           height="620"
+          loading="eager"
           fetchPriority="high"
         />
       </div>
     </section>
   );
-}
+};
+
+export default memo(Home);
