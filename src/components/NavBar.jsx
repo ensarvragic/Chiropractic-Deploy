@@ -13,7 +13,14 @@ export default function NavBar({
   return (
     <nav className="nav" aria-label="Main navigation">
       <div className="logo">
-        <img src={logo} alt="Company Logo" loading="lazy" disable/>
+        <img
+          src={logo}
+          alt="Company Logo"
+          loading="eager" // Change from lazy to eager
+          width="150" // Add explicit dimensions
+          height="50"
+          style={{ width: "auto", height: "auto" }} // Prevent layout shifts
+        />
       </div>
 
       <div className={`links ${menuOpen ? "open" : ""}`}>
@@ -47,7 +54,10 @@ export default function NavBar({
           FAQ
         </button>
 
-        <CustomButton onClick={handleShowModal} aria-label="Book an appointment">
+        <CustomButton
+          onClick={handleShowModal}
+          aria-label="Book an appointment"
+        >
           <FaCalendarCheck style={{ marginRight: "5px" }} />
           Book An Appointment
         </CustomButton>
@@ -66,7 +76,10 @@ export default function NavBar({
         >
           FAQ
         </button>
-        <CustomButton onClick={handleShowModal} aria-label="Book an appointment">
+        <CustomButton
+          onClick={handleShowModal}
+          aria-label="Book an appointment"
+        >
           <FaCalendarCheck style={{ marginRight: "5px" }} />
           Book An Appointment
         </CustomButton>
