@@ -1,6 +1,6 @@
 import CustomButton from "./CustomBtn";
 import { FaPhoneAlt } from "react-icons/fa";
-import chiropractor from "../../public/assets/chiropractor1.webp";
+import chiropractor from '../assets/chiropractor1.webp'
 import "../Styles/home.css";
 
 export default function Home({ handleShowModal }) {
@@ -40,7 +40,7 @@ export default function Home({ handleShowModal }) {
         </section>
       </div>
 
-      <div className="home-img fade-slide-up delay-4">
+      <div className="home-img fade-slide-up delay-2">
         <img
           src={chiropractor}
           alt="Chiropractic session in progress"
