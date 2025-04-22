@@ -1,11 +1,31 @@
 import Recension from "../assets/recensionn.png";
+import { useEffect } from "react";
 import { ImQuotesLeft } from "react-icons/im";
 import '../Styles/review.css';
 import { FaComment } from "react-icons/fa";
 
 export default function Reviews({ handleShowModal }) {
+  useEffect(() => {
+        const elements = document.querySelectorAll(".animate-on-scroll");
+    
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+    
+        elements.forEach((el) => observer.observe(el));
+    
+        return () => observer.disconnect();
+      }, []);
   return (
-    <section className="testimonials-container">
+    <section className="testimonials-container animate-on-scroll">
       <h2>Testimonials</h2>
       <h1>What Our Customers Have To Say About Our Work</h1>
 
@@ -24,7 +44,7 @@ export default function Reviews({ handleShowModal }) {
         />
       </a>
 
-      <div className="testimonial-cards">
+      <div className="testimonial-cards animate-on-scroll">
         <div className="testimonial-card">
           <div className="quote-icon">
             <ImQuotesLeft />
@@ -91,7 +111,7 @@ export default function Reviews({ handleShowModal }) {
         </div>
       </div>
 
-      <button className="consultation-button" onClick={handleShowModal}>
+      <button className="consultation-button animate-on-scroll" onClick={handleShowModal}>
         Book A Consultation
         <FaComment style={{ marginLeft: "5px", marginBottom: "5px" }} />
       </button>
