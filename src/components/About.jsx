@@ -16,33 +16,32 @@ export default function About({ handleShowModal }) {
       name: "Dr. HOOMAN ZAHEDI",
       title: "Chiropractor",
       description:
-        "After qualifying as a chiropractor at Macquarie University, Hooman travelled to the UK...",
+        "After qualifying as a chiropractor at Macquarie University, Hooman travelled to the UK to broaden his clinical experience and pursue his passion for holistic health care. He began working in several multidisciplinary clinics across London, where he collaborated with physiotherapists, massage therapists, and general practitioners. This exposure deepened his understanding of patient-centered care and enhanced his ability to tailor treatment plans to individual needs.",
       image: firstChiro,
     },
     {
       name: "Dr. JASON WHEALING",
       title: "Chiropractor",
       description:
-        "Jason enters his 7th year as Chiropractor at our Dee Why clinic...",
+        "Jason enters his 7th year as Chiropractor at our Dee Why clinic, bringing with him a wealth of experience and a deep commitment to patient care. Over the years, he has built strong relationships within the local community, becoming a trusted figure for individuals and families seeking effective, compassionate treatment.",
       image: secondChiro,
     },
     {
       name: "Dr. CHRISTINE MARTIN",
       title: "Chiropractor",
       description:
-        "After qualifying as a chiropractor at Macquarie University, Christine travelled to the UK...",
+        "After qualifying as a chiropractor at Macquarie University, Christine travelled to the UK to expand her clinical knowledge and work within a variety of healthcare settings. There, she gained valuable experience treating a diverse range of patients, from office workers and athletes to new mums and retirees, each with unique spinal and musculoskeletal needs.",
       image: thirdChiro,
     },
     {
       name: "Dr. SONYA",
       title: "Chiropractor",
       description:
-        "Jason enters his 7th year as Chiropractor at our Dee Why clinic...",
+        "Dr Sonya brings warmth, experience, and a deep passion for holistic health to our Dee Why clinic. With a background in chiropractic care and a strong focus on whole-body wellness, she takes a gentle and thorough approach to helping her patients feel and function at their best.",
       image: fourthChiro,
     },
   ];
 
-  // 👇 Animacija on scroll
   useEffect(() => {
     const elements = document.querySelectorAll(".animate-on-scroll");
 
@@ -65,14 +64,10 @@ export default function About({ handleShowModal }) {
 
   return (
     <div className="about">
-<<<<<<< HEAD
-      <section className="section-about animate-on-scroll" aria-labelledby="about-heading">
-=======
       <section
         className="section-about animate-on-scroll"
         aria-labelledby="about-heading"
       >
->>>>>>> origin
         <h3 className="section-title">How are we Different?</h3>
         <h1 className="section-heading" id="about-heading">
           PERSONALIZED CARE I EXPERT <br />
@@ -84,14 +79,10 @@ export default function About({ handleShowModal }) {
       </section>
 
       <div className="features-container animate-on-scroll">
-<<<<<<< HEAD
-        <div className="feature-card purple" aria-labelledby="male-female-chiropractors">
-=======
         <div
           className="feature-card purple"
           aria-labelledby="male-female-chiropractors"
         >
->>>>>>> origin
           <div className="icon-wrapper">
             <Icon icon="mdi:face-female" className="feature-icon" />
           </div>
@@ -100,43 +91,30 @@ export default function About({ handleShowModal }) {
               Male & Female <br /> Chiropractors
             </h2>
             <p className="feature-text">
-<<<<<<< HEAD
-              Offering both male and female chiropractors...
-=======
               Offering both male and female chiropractors, we provide
               personalized care for pain relief, mobility, and overall
-              well-being. Whether for back pain, sports injuries, or posture
-              correction, our team is here to help.
->>>>>>> origin
+              well-being.
             </p>
           </div>
         </div>
 
         <div className="feature-card red" aria-labelledby="on-site-massage">
           <div className="icon-wrapper">
-<<<<<<< HEAD
-            <img src={massageIcon} className="feature-icon" alt="Massage Icon" loading="lazy" />
-=======
             <img
               src={massageIcon}
               className="feature-icon"
               alt="Massage Icon"
               loading="lazy"
             />
->>>>>>> origin
           </div>
           <div className="feature-content">
             <h2 className="feature-title" id="on-site-massage">
               On-site Massage <br /> Therapist
             </h2>
             <p className="feature-text">
-<<<<<<< HEAD
-              Our skilled therapist creates a tailored experience...
-=======
               Our skilled therapist provides a personalized on-site massage
               experience, promoting relaxation, pain relief, and improved
-              overall well-being in a comfortable setting.
->>>>>>> origin
+              well-being.
             </p>
           </div>
         </div>
@@ -150,40 +128,27 @@ export default function About({ handleShowModal }) {
               We can reduce pain <br /> in just one visit
             </h2>
             <p className="feature-text">
-<<<<<<< HEAD
-              At Complete Chiropractic, we target pain and injuries at their source...
-=======
               At Complete Chiropractic, we target pain and injuries at their
               source, providing effective treatments that address the root
-              cause, not just the symptoms. Our approach focuses on long-term
-              relief and improved mobility for a healthier, pain-free lifestyle.
->>>>>>> origin
+              cause.
             </p>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-      <button className="about-btn animate-on-scroll" onClick={handleShowModal} aria-label="Book an appointment">
-=======
       <button
         className="about-btn animate-on-scroll"
         onClick={handleShowModal}
         aria-label="Book an appointment"
       >
->>>>>>> origin
         <FaCalendarCheck style={{ marginRight: "5px" }} />
         Book An Appointment
       </button>
 
-<<<<<<< HEAD
-      <section className="about-us animate-on-scroll" aria-labelledby="about-us-title">
-=======
       <section
         className="about-us animate-on-scroll"
         aria-labelledby="about-us-title"
       >
->>>>>>> origin
         <div className="about-content">
           <h3 className="about-subtitle">About Us.</h3>
           <h2 className="about-title" id="about-us-title">
@@ -193,12 +158,8 @@ export default function About({ handleShowModal }) {
             As the leading chiropractic clinic in Sydney’s Northern Beaches...
           </p>
           <p className="about-text">
-<<<<<<< HEAD
-            At Complete Chiropractic, we target pain and injuries at their source...
-=======
             At Complete Chiropractic, we target pain and injuries at their
             source...
->>>>>>> origin
           </p>
           <a
             href="#learn-more"
@@ -209,15 +170,6 @@ export default function About({ handleShowModal }) {
           </a>
         </div>
         <div className="about-image">
-<<<<<<< HEAD
-          <img src={AboutImage} alt="Our Team" className="about-imgs" loading="lazy" />
-          <img src={AboutImage1} alt="Child Chiropractic Treatment" className="about-imgs" loading="lazy" />
-        </div>
-      </section>
-
-      <div className="team-container animate-on-scroll" aria-labelledby="team-title">
-        <h2 className="team-title-about" id="team-title">Who We Are?</h2>
-=======
           <img
             src={AboutImage}
             alt="Our Team"
@@ -240,25 +192,20 @@ export default function About({ handleShowModal }) {
         <h2 className="team-title-about" id="team-title">
           Who We Are?
         </h2>
->>>>>>> origin
         {chiropractors.map((chiro, index) => (
           <div
             key={index}
             className={`team-card ${
-              index % 2 === 0 ? "group-one" : "group-two"
-            } ${index % 2 === 0 ? "left" : "right"}`}
+              index % 2 === 0 ? "group-one left" : "group-two right"
+            }`}
             aria-labelledby={`team-member-${index}`}
           >
-<<<<<<< HEAD
-            <img src={chiro.image} alt={`Image of ${chiro.name}`} className="team-image" loading="lazy" />
-=======
             <img
               src={chiro.image}
               alt={`Image of ${chiro.name}`}
               className="team-image"
               loading="lazy"
             />
->>>>>>> origin
             <div className="team-info">
               <h3 className="team-name" id={`team-member-${index}`}>
                 {chiro.name}
@@ -268,15 +215,11 @@ export default function About({ handleShowModal }) {
             </div>
           </div>
         ))}
-<<<<<<< HEAD
-        <button className="team-btn animate-on-scroll" onClick={handleShowModal} aria-label="Book a consultation with our team">
-=======
         <button
           className="team-btn animate-on-scroll"
           onClick={handleShowModal}
           aria-label="Book a consultation with our team"
         >
->>>>>>> origin
           Book A Consultation
           <FaComment style={{ marginLeft: "5px", marginBottom: "3px" }} />
         </button>

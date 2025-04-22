@@ -1,8 +1,8 @@
 import CustomButton from "./CustomBtn";
 import { FaPhoneAlt } from "react-icons/fa";
-import chiropractor from '../assets/chiropractor1.webp'
+import chiropractor1 from '../assets/chiropractor1.webp'
 import "../Styles/home.css";
-import chiropractor1 from '../assets/chiropractor1.png'
+
 
 export default function Home({ handleShowModal }) {
   return (
@@ -47,11 +47,6 @@ export default function Home({ handleShowModal }) {
           alt="Chiropractic session in progress"
           width="696"
           height="620"
-<<<<<<< HEAD
-          fetchpriority="high"
-=======
-          fetchPriority="high"
->>>>>>> origin
         />
       </div>
     </section>

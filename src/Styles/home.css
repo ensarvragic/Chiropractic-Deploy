@@ -54,7 +54,7 @@
   background-color: #b21447;
 }
 
-/* Stats Section - Updated */
+/* Stats Section */
 .stats {
   display: flex;
   gap: 50px;
@@ -87,6 +87,7 @@
   height: 85vh;
   width: 100%;
   margin-left: 40px;
+  object-fit: cover;
   aspect-ratio: 16/9;
 }
 
@@ -170,7 +171,7 @@
 
   .home-img img {
     width: 100%;
-    height:auto;
+    height: auto;
   }
 }
 
@@ -199,11 +200,7 @@
     text-align: center;
     padding: 0 15px;
   }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin
   .stats {
     display: flex;
     flex-direction: row;
@@ -257,6 +254,7 @@
     margin-top: 20px;
   }
 }
+
 @keyframes fadeSlideUp {
   from {
     opacity: 0;
@@ -270,11 +268,7 @@
 
 .fade-slide-up {
   opacity: 0;
-<<<<<<< HEAD
   animation: fadeSlideUp 0.8s ease-out forwards;
-=======
-  animation: fadeSlideUp 0.3s ease-out forwards;
->>>>>>> origin
 }
 
 .delay-1 {
@@ -287,10 +281,5 @@
   animation-delay: 0.6s;
 }
 .delay-4 {
-<<<<<<< HEAD
   animation-delay: 0.8s;
 }
-=======
-  animation-delay: 0.3s;
-}
->>>>>>> origin
